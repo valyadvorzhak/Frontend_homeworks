@@ -1,0 +1,60 @@
+body {
+    width: 775px;   /*взяла такую ширину как в исходнике */
+    font-size: 18px;
+    margin: 0 auto;  /*отцентрировала, чтобы ориентироваться на ширину картинки */
+}
+
+header {
+    background-color: #a52a2a;
+    height: 35px;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.conteiner {
+    margin-top: 20px;
+    width: 760px; /*ширина контейнера в исходнике меньше */
+}
+
+.text-lorem {
+    margin: 20px 0px 20px 0px;
+   
+}
+
+footer {
+    background-color: black;
+    height: 23px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.car {
+    border: 3px dashed black;    
+}
+
+.car-gallery  {
+    display: flex;
+    justify-content: center;
+}
+
+.blue-1 {
+    color: blue;
+    font-weight: 700;
+}
+
+.blue-2 {
+    color: blue;
+}
+
+
+
+
+
