@@ -1,0 +1,157 @@
+/* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+  }
+
+
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v18-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('../fonts/open-sans-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/open-sans-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/open-sans-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/open-sans-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/open-sans-v18-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  }  
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    /*background-color: blue;*/
+    height: 460px;    
+}
+
+.boxes {
+    flex: 1;
+    text-align: center;
+    /*background-color:  #9a0909;*/
+    /*width: 360px;*/    
+    margin-right: 30px;
+}
+
+.wrapper :last-child {
+    margin-right: 0px;
+}
+
+
+.box-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffae00;
+    border-radius: 20px 0px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.icon {
+    margin: 0;
+}
+
+.title {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 30px;
+    line-height: 24px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 20px 0px 20px;
+}
+
+.fas fa-desktop {
+    color: white;
+}
+
+
+.footer-wrapper {
+    margin: 0 auto;
+    max-width: 1140px;
+    /*background-color: orange;*/
+    height: 420px;
+    font-family: 'Open Sans', sans-serif;    
+    text-align: center;
+    align-items: center;    
+}
+
+
+.logo {   
+    margin-top: 90px;    
+}
+
+.social-text {   
+    margin-top: 40px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    padding: 0;    
+}
+
+.separator-wrapper {
+    margin: 0 auto;
+    width: 225px;    
+    border-bottom: solid 2px;
+    border-color: white;     
+}
+
+.social-icon-block {   
+    margin-top: 20px;    
+}
+
+.social-icon {
+    margin-right: 25px;
+}
+
+.social-icon-block :last-child {
+    margin-right: 0px;
+}
+
+
+.credential {   
+    margin-top: 90px;
+    font-size: 15x;    
+}
+
+.credential span {
+    color: #21a8d1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
