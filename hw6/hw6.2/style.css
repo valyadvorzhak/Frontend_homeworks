@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Trebushet MS Regular';  /*шрифт нашла только такой */
+    src: url('../fonts/9412.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+*{transition: all .1s ease-in;}
+
+body {
+    background-color: black;
+    font-family: 'Trebushet MS Regular', sans-serif;
+    
+}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 950px;
+    height: 600px;
+    background-color: white;
+    padding: 20px;
+}
+
+.main {
+    background-color:#3b3f45;
+    height: 100%;
+}
+
+.top {
+    height: 90px;
+    background-color:#4a4f56;
+    color: #eb7e7f;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;                      
+}
+
+.list-name {
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.header-text {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.list-wrapper {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.list {
+    list-style: none;
+    padding: 0px;
+}
+
+.list-item {
+    height: 50px;
+    background-color: #88839e;
+    display: flex;
+    align-items: center;    
+    color:white;    
+}
+
+/*четные элементы списка имеют другой фон - селектор nth-child(2n) (задание)*/
+.list-item:nth-child(2n) {
+    background-color:#7a7593;
+}
+
+/*селектор :hover (задание)*/
+.list-item:hover {
+    background-color: #625e77;
+    border-top: 3px  solid white;
+    border-bottom: 3px  solid white;
+    box-sizing: border-box;    /*фикированный размер блока при наведении*/
+}
+
+/*подстраховка заливки фона элемента списка при смене наполнения*/
+.list-item:active {
+    background-color: #eb7e7f;;
+}
+
+/*label занял все свободное место контейнера, сменили курсор на указатель*/
+.check {    
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/*Селектор :active*/
+.check:active {
+    background-color: #eb7e7f;
+}
+
+/*Селектор по типу*/
+input[type="checkbox"] {
+    height: 100%;
+    margin: 0;
+    margin-right: 4px;
+    margin-left: 4px; 
+}
+
+/*Селектор соседа (задание)*/
+input[type="checkbox"]:checked+.check {
+    text-decoration: line-through;
+    color: #a3a0b5;
+}
+
+/*Примечание меньшим шрифтом*/
+.note {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: #a3a0b5;
+}
+
+/*Скобочки с помощью befor и after*(задание)*/
+.note::before {     
+    content: "(";    
+}
+
+.note::after {     
+    content: ")";    
+}
+
+/*Спрячем примечание, пока в него не пришли данные с бекенда (плюс в задании было использовать селектор по классу)*/
+ #item5+.check :nth-last-child(1)  {
+   display: none;
+}
+
+
+.footer {
+    margin-top: 25px;
+    height: 50px;
+    background-color: #4a4f56;
+    color: #eb7e7f;    
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.footer-text {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
