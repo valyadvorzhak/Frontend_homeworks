@@ -1,0 +1,70 @@
+body {
+    background-color: #fdde7e;
+    font-family: 'Miso';
+}
+
+.box {
+    max-width: 97%; 
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;   
+    justify-content: space-between;
+}
+
+.item-1 {
+    height: 442px;
+    
+}
+  
+  .item-2 {
+    height: 500px;   
+    
+  }
+
+  .card {
+      width: 32%;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            
+  }
+
+  .price {
+      color: #02995b;
+      font-size: 70px;
+      font-weight: 700;  
+    }
+
+    .item-name {
+        font-size: 56px;
+        font-weight: 300;
+    }
+
+    .item-desc {
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .cup-icon {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    /* заствили цену "улететь вверх, но чтобы чашка осталась на одном уровне с другими чашками. */
+    .item-2 .price {
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+
+
+
+
+
+
+
