@@ -81,12 +81,27 @@ body {
     height: 66px;    
 }
 
+.white {
+    display: none;
+}
+
 .boxes:hover .description {
     color: #ffffff;
 }
 
 .boxes:hover .box-icon {
     color: #ffffff;
+}
+
+
+/*пример перекрашивания иконки в белый цвет */
+
+.boxes:hover  .white {
+    display: block;
+}
+
+.boxes:hover .black {
+    display: none;
 }
 
 
