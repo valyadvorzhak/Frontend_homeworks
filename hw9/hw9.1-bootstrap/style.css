@@ -1,0 +1,61 @@
+/*.themed-grid-col {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(86, 61, 124, .15);
+  border: 1px solid rgba(86, 61, 124, .2);
+}
+
+.themed-container {
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(0, 123, 255, .15);
+  border: 1px solid rgba(0, 123, 255, .2);
+}
+
+*/
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.title-header {
+  max-width: 700px;
+}
+
+.bi {
+  font-size: 3em;
+}
+
+.bi-cursor-fill {
+  font-size: 1.2em;
+}
+
+
+
+.snow {
+  background-image: url('img/icons8-snow-storm-16.png');  
+  animation: snow 20s linear infinite;
+      }     
+@keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        100% {background-position: 500px 1000px, 400px 400px, 300px 300px}
+             }
+
+.icon-block:hover {
+  background-color: rgb(16, 165, 16);  
+} 
+
+.icon-block:hover .bi {
+  color: #fff !important;
+}
+
+            
