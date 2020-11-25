@@ -42,7 +42,7 @@ html {
 
 
 .snow {
-  background-image: url('img/icons8-snow-storm-16.png');  
+  background-image: url('img/1-1.jpg');  
   animation: snow 20s linear infinite;
       }     
 @keyframes snow {
