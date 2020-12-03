@@ -1,0 +1,190 @@
+/**Was mady with bootstrap 4 ( only for grid), BEM */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    min-height: 100vh;
+}
+
+.contact-page {
+    background-color: #e5eeee;
+    background-image: url(../img/bg.jpg);   
+    max-width: 1500px;
+    margin: 0 auto;
+    /*height: 866px;    Reject to make column to work adaptive. Let see on small screen */ 
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;    
+}
+
+.header {
+    max-width: 370px;
+}
+
+form {
+    position: relative;  
+} 
+
+/*reject bootstrap style*/
+button,
+input,
+textarea, 
+select, option {
+  font-family: 'Raleway', sans-serif !important; 
+  font-size: 15px !important; 
+  line-height: 1.15 !important; 
+  margin: 0; 
+}
+
+/* Style for placeholder text */ 
+input::-webkit-input-placeholder {
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+input:-moz-placeholder {
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+textarea::-webkit-input-placeholder {
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+textarea:-moz-placeholder {
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+.form__label {
+    display: none;
+}
+
+/*my style for input and select*/
+.form__input {
+    background: #00c4c4;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 16px 0 0;
+    padding: 18px;
+}
+
+
+.form__input:focus {
+    opacity: 1;
+    border-left: #355b82 5px solid;
+    font-weight: 700;
+    padding-left: 13px;
+}
+
+.form__error {
+    color: red;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+.form__input:invalid+.form__error {
+    visibility: visible;
+}
+
+#message {
+    height: 200px;
+    margin-bottom: 120px;
+    margin-top: 60px;    
+}
+
+
+#email {
+    text-transform: none;
+}
+
+
+.form__controls--submit {
+   /* padding-top: 36px;  only for relative*/    
+    bottom: 40px;
+    position: absolute; /*button always 40px under column bottom*/
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*reject some bootstrap style*/
+.btn--primary {    
+    color: #fff !important;
+    font-weight: 700 !important;
+    width: 100%;
+    border: 2px solid #23ae92 !important;
+    
+}
+
+.btn--primary:focus {
+    border: 2px solid #e66a64;
+}
+
+.btn--primary:hover {
+    background-color: #e66a64;
+}
+
+
+.contacts__row {
+    margin: 16px 0 0;
+}
+
+.contacts {
+    font-family: 'Raleway', sans-serif !important; 
+      
+}
+
+.contacts p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.row_title {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.footer {
+    background-color: #262626;
+    height: 90px;
+    max-width: 1500px;
+    margin: 0 auto;
+    top: 860px;
+    color: #b9b9b9;
+    font-size: 16px;
+}
+
+
+.credential__avtor span {
+    color: red;
+}
+
+.credential__logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+
+
+
+
+
