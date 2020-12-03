@@ -1,0 +1,261 @@
+body{
+    font-family:$font;
+    font-size: $baseFontSize;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    margin-top: 115px;;
+}
+
+.header{
+    position: relative;
+
+    &__title {
+    color: $titleColor;
+    text-align: center;
+    line-height: $LineHeight;
+    }
+
+    &__subtitle {
+    font-size: $baseFontSize + 42px;
+    color: $secondColor;
+    font-weight: $titleFontw;
+    text-align: center;
+    margin-bottom: 55px;
+    
+    }
+
+    &__separator{
+    @extend .separator;
+    &:before {
+    width: 450px;
+        }
+        
+    }
+
+    &__separator {
+        
+        &:after{
+            display: block;
+            content: '' ;
+            background-image: url('img/flower-icon.png');
+            width: 30px;
+            height: 21px;
+            right: 50%;
+            bottom: 0;
+            position: absolute;
+            transform: translate(50%, 50%);
+        }
+    }
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+
+
+    &__next {
+        @extend .arrow;
+        left: -50px;
+    }
+
+    &__rev {
+        @extend .arrow;
+        right: -50px;
+    }
+
+    &__photo {
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: center;
+
+        .corner-box {
+            width: 420px;
+            position: relative;
+            @extend .border;
+            transition: all .3s ease;
+            display: inline-block;
+            box-sizing: border-box;
+
+        &:before, 
+        &:after {
+            content: "";
+            z-index: 1;
+            display: block;
+            position: absolute;
+            background: #FFF;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+        &:before {
+            width: calc(100% + 5px);
+            height: 80%;
+            transition: height 0.6s;
+        }
+        &:after {
+            height: calc(100% + 5px);
+            width: 80%;
+            transition: width 0.6s;
+        }
+        &:hover:before, 
+        &:focus:before {
+            height: 50%;
+        }
+        &:hover:after, 
+        &:focus:after {
+            width: 75%;
+        }
+
+        .img-container {
+            @extend .border;
+            margin: 15px;
+            z-index: 2;
+            position: relative;
+            height: 388px;
+            width: 388px;
+            background-image: url(img/back.png); 
+            background-color: #c7b39b;
+            }
+            
+        /*.img-container{
+        @include lgradient($secondColor, 5px, 0);  //test the mixine 
+        }*/    
+               
+        }
+    }
+
+    &__separator {
+        
+        &:before {
+            display: block;
+            content: '' ;
+            width: 2px;
+            height: 560px;
+            border-right: 2px solid $secondColor;
+            margin: 0 auto;
+            }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        padding-left: 80px;
+        padding-top: 90px;
+        box-sizing: border-box;        
+
+    } 
+
+   .details {
+    
+    &__name {
+        color: $titleColor;
+        font-size: $baseFontSize + 16px;
+        font-weight: $titleFontw;
+        line-height: $LineHeight;
+    }
+
+    &__separator {
+        @extend .separator;
+        margin: 20px 0;        
+    }
+
+    &__position {
+        color: $titleColor;
+        font-size: $baseFontSize + 6px;
+        line-height: $LineHeight;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        margin: 30px auto;
+
+        
+        .round {            
+            width: 1.5em;
+            height: 1.5em;
+            border: 2px solid $iconColor;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.1em;
+        }
+
+        .icon  {            
+            width: 0.7em;
+            height: 0.7em;
+            stroke-width: 0;
+            stroke: $iconColor;
+            fill: $iconColor;          
+            
+          }
+    }
+
+    &__descr {
+        color: $mainColor;
+        font-size: $textFontSize;
+        line-height: $LineHeight;
+        text-align: center;
+    }
+
+    &__separator--doted {
+        margin: 22px auto;
+        @extend .separator;
+            &:before {
+            width: 52px;
+            border-top-style: dashed;
+            border-top-width: 3px;
+            }
+    }
+
+    &__button_profile {
+        @extend .border;
+        color: $titleColor;
+        font-size: $textFontSize;
+        line-height: $LineHeight;
+        text-align: center;
+        padding: 4px 10px;                    
+        
+    }
+
+   } 
+
+}
+
+.footer {
+    &__nav {
+        margin: 40px auto 90px;
+        list-style: none;
+        width: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__navitems {
+        display: inline-block;                
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $secondColor;            
+        margin: 5px;
+        
+        &:active {
+            border: 1px  solid $secondColor;;
+            background-color: #ffffff; 
+        }        
+    }
+
+
+}

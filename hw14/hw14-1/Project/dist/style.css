@@ -1,0 +1,224 @@
+.separator:before, .main .details__separator--doted:before, .main .details__separator:before, .header__separator:before {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 2px;
+  border-top: 2px solid #ffcc00;
+  margin: 0 auto;
+}
+
+.border, .main .details__button_profile, .main__photo .corner-box .img-container, .main__photo .corner-box {
+  border: 2px solid #ffcc00;
+  box-sizing: border-box;
+}
+
+.arrow, .main__rev, .main__next {
+  position: absolute;
+  font-size: 38px;
+  color: #ffcc00;
+  font-weight: 700;
+  top: 50%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 115px;
+}
+
+.header {
+  position: relative;
+}
+.header__title {
+  color: #666666;
+  text-align: center;
+  line-height: 24px;
+}
+.header__subtitle {
+  font-size: 60px;
+  color: #ffcc00;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 55px;
+}
+.header__separator:before {
+  width: 450px;
+}
+.header__separator:after {
+  display: block;
+  content: "";
+  background-image: url("img/flower-icon.png");
+  width: 30px;
+  height: 21px;
+  right: 50%;
+  bottom: 0;
+  position: absolute;
+  transform: translate(50%, 50%);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.main__next {
+  left: -50px;
+}
+.main__rev {
+  right: -50px;
+}
+.main__photo {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main__photo .corner-box {
+  width: 420px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-sizing: border-box;
+  /*.img-container{
+  @include lgradient($secondColor, 5px, 0);  //test the mixine 
+  }*/
+}
+.main__photo .corner-box:before, .main__photo .corner-box:after {
+  content: "";
+  z-index: 1;
+  display: block;
+  position: absolute;
+  background: #FFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+.main__photo .corner-box:before {
+  width: calc(100% + 5px);
+  height: 80%;
+  transition: height 0.6s;
+}
+.main__photo .corner-box:after {
+  height: calc(100% + 5px);
+  width: 80%;
+  transition: width 0.6s;
+}
+.main__photo .corner-box:hover:before, .main__photo .corner-box:focus:before {
+  height: 50%;
+}
+.main__photo .corner-box:hover:after, .main__photo .corner-box:focus:after {
+  width: 75%;
+}
+.main__photo .corner-box .img-container {
+  margin: 15px;
+  z-index: 2;
+  position: relative;
+  height: 388px;
+  width: 388px;
+  background-image: url(img/back.png);
+  background-color: #c7b39b;
+}
+.main__separator:before {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 560px;
+  border-right: 2px solid #ffcc00;
+  margin: 0 auto;
+}
+.main__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding-left: 80px;
+  padding-top: 90px;
+  box-sizing: border-box;
+}
+.main .details__name {
+  color: #666666;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.main .details__separator {
+  margin: 20px 0;
+}
+.main .details__position {
+  color: #666666;
+  font-size: 24px;
+  line-height: 24px;
+}
+.main .details__social {
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+}
+.main .details__social .round {
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1em;
+}
+.main .details__social .icon {
+  width: 0.7em;
+  height: 0.7em;
+  stroke-width: 0;
+  stroke: #cccccc;
+  fill: #cccccc;
+}
+.main .details__descr {
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+.main .details__separator--doted {
+  margin: 22px auto;
+}
+.main .details__separator--doted:before {
+  width: 52px;
+  border-top-style: dashed;
+  border-top-width: 3px;
+}
+.main .details__button_profile {
+  color: #666666;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  padding: 4px 10px;
+}
+
+.footer__nav {
+  margin: 40px auto 90px;
+  list-style: none;
+  width: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.footer__navitems {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  margin: 5px;
+}
+.footer__navitems:active {
+  border: 1px solid #ffcc00;
+  background-color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
