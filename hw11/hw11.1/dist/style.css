@@ -1,0 +1,854 @@
+.base-btn, .blog__btn, .subscribe .btn--subscribe, .gallery__btn, .header__btn {
+  font-size: 1.25rem;
+  padding: 0.9375rem 0;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 200px;
+}
+
+.header {
+  background-image: url("img/bg-st-berry.png");
+  background-size: cover;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 1000px;
+}
+@media screen and (max-width: 991px) {
+  .header {
+    background-image: none;
+    min-height: 700px;
+  }
+}
+.header__mane-menu {
+  min-height: 150px;
+}
+.header__left, .header__right {
+  position: relative;
+  /* Landscape phone to portrait tablet */
+}
+@media screen and (max-width: 767px) {
+  .header__left, .header__right {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__left, .header__right {
+    text-align: center;
+  }
+}
+.header__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 3.125rem;
+}
+@media screen and (max-width: 767px) {
+  .header__logo {
+    padding: 0.5em 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__logo {
+    padding: 0.5em 0;
+  }
+}
+.header .menu {
+  /* Landscape phones and down */
+}
+.header .menu__label {
+  position: absolute;
+  top: -5.2em;
+  right: 0.9375rem;
+  cursor: pointer;
+}
+.header .menu span {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  background: #000000;
+  -webkit-transition: all 0.3s ease;
+}
+.header .menu span:hover {
+  background: #332e2e;
+}
+.header .menu span:before,
+.header .menu span:after {
+  content: "";
+  position: absolute;
+  width: 2.2em;
+  height: 0.5em;
+  top: 4px;
+  left: -0.1em;
+  background: #fff;
+}
+.header .menu span:after {
+  top: 14px;
+}
+.header .menu #open {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .header .menu__nav {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    position: absolute;
+    top: 0px;
+  }
+}
+.header .menu__nav > a {
+  text-decoration: none;
+  color: #000000;
+  outline: none;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 1em;
+  -webkit-transition: all 0.3s ease;
+  /* Small monitor */
+}
+@media screen and (max-width: 991px) {
+  .header .menu__nav > a {
+    padding: 0 0.5em;
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .menu__nav > a {
+    padding: 0.5em 2em;
+    display: block;
+  }
+}
+.header .menu__nav > a:hover {
+  border-top: #ff6033 2px solid;
+  text-decoration: none;
+  color: #000000;
+}
+@media screen and (max-width: 480px) {
+  .header .menu__nav > a:hover {
+    background: #000000;
+    color: #fff;
+    border-top: none;
+  }
+}
+.header .menu .hidden-desktop {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .header .menu .hidden-desktop {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .menu__checkbox:checked + .menu__nav {
+    height: 205px;
+    width: inherit;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header__freshlife-block {
+    text-align: center;
+  }
+}
+.header__textblock {
+  color: #000000;
+  font-style: "Raleway", sans-serif;
+  line-height: 1.6875rem;
+}
+.header__title {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 375px) {
+  .header__title {
+    font-size: 1.875rem;
+  }
+}
+.header__descr {
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 991px) {
+  .header__descr {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__descr {
+    font-size: 0.75rem;
+    margin: 0 5px;
+  }
+}
+.header__btn {
+  color: #fff;
+  background-color: #ff6033;
+  margin-top: 2em;
+}
+
+.about {
+  background-image: url("img/bg-bl.png");
+  background-size: cover;
+  background-color: #00c4c4;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 700px;
+}
+.about__img .rastb_img {
+  width: 105%;
+  height: auto;
+  margin: 2px;
+  max-width: 500px;
+}
+.about__textblock {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6875rem;
+}
+.about__title {
+  font-size: 5.625rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 480px) {
+  .about__title {
+    font-size: 1.875rem;
+  }
+}
+.about__descr {
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .about__descr {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .about__descr {
+    font-size: 0.75rem;
+    margin: 0 5px;
+  }
+}
+
+/*&__subtitle {
+  font-size: rem-calc(60px);
+  color: $secondColor;
+  font-weight: $titleFontw;
+  text-align: center;
+  margin-bottom: 55px;
+}*/
+.services {
+  background-color: #70bfff;
+  width: 100%;
+  min-height: 790px;
+}
+.services__itemblock {
+  width: 100%;
+}
+.services__row {
+  width: 100%;
+  margin: 0 auto;
+}
+.services__item {
+  background-color: #fff;
+  margin: 0.625rem 0;
+}
+.services .item__text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.9375rem 0;
+}
+.services .item__icon {
+  border-left: 1px solid #000000;
+  padding: 1.25rem;
+}
+.services .item__icon .icon {
+  width: 2em;
+  height: 2em;
+  stroke-width: 0;
+  stroke: #000000;
+  fill: #000000;
+}
+.services__img .tomato_img {
+  width: 100%;
+  height: auto;
+  margin: 2px;
+  max-width: 500px;
+}
+.services__title {
+  position: absolute;
+  width: 110%;
+  right: 20%;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 991px) {
+  .services__title {
+    width: 100%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .services__title {
+    font-size: 1.875rem;
+  }
+}
+
+.gallery {
+  background-color: #ffe92f;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 1536px;
+}
+@media screen and (max-width: 991px) {
+  .gallery {
+    min-height: 50%;
+    padding-bottom: 2em;
+  }
+}
+.gallery__galleryname {
+  color: #000000;
+  font-style: "Raleway", sans-serif;
+  line-height: 1.6875rem;
+}
+.gallery .galleryname__title {
+  font-size: 5.625rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+@media screen and (max-width: 480px) {
+  .gallery .galleryname__title {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+}
+.gallery .galleryname__subtitle {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .gallery .galleryname__subtitle {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .gallery .galleryname__subtitle {
+    font-size: 0.875rem;
+    margin: 0 5px;
+  }
+}
+.gallery .photos {
+  margin: 2em auto;
+}
+@media screen and (max-width: 767px) {
+  .gallery .photos__img {
+    margin: 10px 0;
+  }
+}
+.gallery .photos__img .photos_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 770px;
+  margin: 0 auto;
+}
+.gallery__btn {
+  color: #fff;
+  background-color: #5585a2;
+  margin: 1em auto;
+}
+
+.subscribe {
+  background-image: url("img/bg-blueberry.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 500px;
+  /*reject some bootstrap style for button*/
+}
+@media screen and (max-width: 767px) {
+  .subscribe {
+    background-image: none;
+  }
+}
+.subscribe__formsub {
+  min-height: inherit;
+}
+.subscribe__container {
+  padding-top: 120px !important;
+}
+@media screen and (max-width: 767px) {
+  .subscribe__container {
+    padding-top: 80px !important;
+  }
+}
+.subscribe__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .subscribe__title {
+    text-align: center;
+  }
+}
+.subscribe__subtitle {
+  font-size: 1.0625rem;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .subscribe__subtitle {
+    text-align: center;
+  }
+}
+.subscribe .formsub {
+  /* Style for placeholder text */
+}
+.subscribe .formsub__label {
+  display: none;
+}
+.subscribe .formsub__input {
+  width: 100%;
+  color: #000000;
+  padding: 18px;
+}
+.subscribe .formsub__controls--submit {
+  padding: 18px;
+  width: 100%;
+}
+.subscribe .formsub__input::-webkit-input-placeholder {
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+}
+.subscribe .formsub__input:-moz-placeholder {
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+}
+.subscribe .btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+.subscribe .btn--subscribe {
+  color: #fff;
+  background-color: #96b92c;
+  font-size: 1.25rem !important;
+  width: 100%;
+  padding: 0.75rem;
+}
+.subscribe .btn--subscribe:focus {
+  border: 2px solid #ff6033;
+}
+.subscribe .btn--subscribe:hover {
+  background-color: #ff6033;
+  color: #fff;
+}
+
+.blog {
+  background-color: #b07cf7;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 864px;
+}
+@media screen and (max-width: 991px) {
+  .blog {
+    min-height: 50%;
+    padding-bottom: 2em;
+  }
+}
+.blog__blogname {
+  color: #fff;
+  font-style: "Raleway", sans-serif;
+  line-height: 1.6875rem;
+}
+.blog .blogname__title {
+  font-size: 5.625rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+@media screen and (max-width: 480px) {
+  .blog .blogname__title {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+}
+.blog .blogname__subtitle {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .blog .blogname__subtitle {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .blog .blogname__subtitle {
+    font-size: 0.875rem;
+    margin: 0 5px;
+  }
+}
+.blog .article {
+  margin: 4em auto;
+}
+.blog .article__img {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .blog .article__img {
+    margin: 10px 0;
+  }
+}
+.blog .article__img .blog_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 370px;
+  margin: 0 auto;
+}
+.blog .article__day {
+  position: absolute;
+  padding: 2px;
+  background: #262626;
+  color: #fff;
+  z-index: 100;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 24px;
+  opacity: 70%;
+  top: 10%;
+  left: 10%;
+}
+@media screen and (max-width: 767px) {
+  .blog .article__day {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blog .article__day {
+    left: 10%;
+  }
+}
+.blog .article__day :first-child {
+  font-size: 2rem;
+}
+.blog .article__day :last-child {
+  font-size: 1.3125rem;
+}
+.blog .article__overlay, .blog .article__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  .blog .article__overlay, .blog .article__gradient {
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+.blog .article__overlay {
+  background: #ffffff;
+  opacity: 0;
+}
+.blog .article__overlay:hover {
+  opacity: 0.7;
+}
+.blog .article__overlay:hover + div {
+  color: #000000;
+}
+.blog .article__gradient {
+  background: linear-gradient(to top, black 0%, transparent 100%);
+}
+.blog .article__wrapper {
+  position: absolute;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  bottom: 5%;
+  left: 10%;
+}
+@media screen and (max-width: 767px) {
+  .blog .article__wrapper {
+    left: 20%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blog .article__wrapper {
+    left: 10%;
+  }
+}
+.blog .article__wrapper :first-child {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 1.25rem;
+}
+@media screen and (max-width: 991px) {
+  .blog .article__wrapper :first-child {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .blog .article__wrapper :first-child {
+    left: 20%;
+    font-size: 1.25rem;
+  }
+}
+.blog .article__wrapper :last-child {
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+.blog__btn {
+  color: #fff;
+  background-color: #ff6033;
+  margin: 1em auto;
+}
+
+/*reject bootstrap style*/
+input,
+textarea,
+select, option {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.15 !important;
+  margin: 0;
+}
+
+/* Style for placeholder text */
+input::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+input:-moz-placeholder {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+textarea:-moz-placeholder {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+#message {
+  height: 200px;
+  margin-bottom: 120px;
+  margin-top: 80px;
+}
+
+#email {
+  text-transform: none;
+}
+
+.contact-page {
+  background-image: url(img/bg.jpg);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  min-height: 865px;
+  background-size: cover;
+  background-color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .contact-page {
+    min-height: 700px;
+  }
+}
+.contact-page__top {
+  max-width: 70%;
+}
+.contact-page .top__title {
+  font-size: 5.625rem;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+}
+@media screen and (max-width: 480px) {
+  .contact-page .top__title {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+}
+.contact-page .top__subtitle {
+  font-size: 1.0625rem;
+  font-weight: 300;
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .contact-page .top__subtitle {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-page .top__subtitle {
+    font-size: 0.875rem;
+    margin: 0 5px;
+  }
+}
+.contact-page .content__form {
+  position: relative;
+}
+.contact-page .content .form {
+  /*my style for input and select*/
+}
+.contact-page .content .form__label {
+  display: none;
+}
+.contact-page .content .form__input {
+  background: #00c4c4;
+  opacity: 0.5;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 16px 0 0;
+  padding: 18px;
+}
+.contact-page .content .form__input:focus {
+  opacity: 1;
+  border-left: #355b82 5px solid;
+  font-weight: 700;
+  padding-left: 13px;
+}
+.contact-page .content .form__error {
+  color: red;
+  font-size: 10px;
+  visibility: hidden;
+}
+.contact-page .content .form__input:invalid + .contact-page .content .form__error {
+  visibility: visible;
+}
+.contact-page .content .form__controls--submit {
+  /* padding-top: 36px;  only for relative*/
+  bottom: 40px;
+  position: absolute;
+  /*button always 40px under column bottom*/
+  width: 100%;
+}
+
+/*reject some bootstrap style for button*/
+.btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: #fff !important;
+  width: 100%;
+  border: 2px solid #23ae92 !important;
+}
+
+.btn--primary:focus {
+  border: 2px solid #e66a64;
+}
+
+.btn--primary:hover {
+  background-color: #e66a64;
+}
+
+/*contacts*/
+.contacts {
+  font-family: "Raleway", sans-serif;
+}
+@media screen and (max-width: 575px) {
+  .contacts {
+    color: #fff;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}
+.contacts__row {
+  margin: 16px 0 0;
+}
+.contacts__row .row_title {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.contacts p {
+  margin: 0;
+  font-size: 20px;
+}
+
+/*footer*/
+.footer {
+  background-color: #262626;
+  height: 90px;
+  max-width: 100%;
+  margin: 0 auto;
+  /*top: 860px;*/
+  color: #b9b9b9;
+  font-size: 16px;
+}
+@media screen and (max-width: 575px) {
+  .footer .credential__avtor, .footer .credential__company {
+    text-align: center;
+  }
+}
+.footer .credential__avtor, .footer .credential__company {
+  font-family: "Raleway", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .footer .credential__avtor, .footer .credential__company {
+    font-size: 12px;
+  }
+}
+.footer .credential__avtor span, .footer .credential__company span {
+  color: red;
+}
+.footer .credential__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5625rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  /*max-width: 1200px;*/
+  padding: 0;
+  /*background-color: #00c210;*/
+  min-height: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}

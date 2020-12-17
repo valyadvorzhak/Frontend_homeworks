@@ -1,0 +1,89 @@
+.services {
+    
+    background-color: $blueBack;
+    width: 100%;
+    min-height: 790px;
+
+    &__itemblock {
+      width: 100%;
+    }
+
+    &__row {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__item {
+      background-color: $whiteBack;
+      margin: rem-calc(10px) 0;
+      
+
+    }
+
+    .item {
+      &__text {
+        font-size: rem-calc(20px);
+        font-weight: $titleFontw;
+        color: $darkColor;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: rem-calc(15px) 0;        
+      }
+
+      &__icon {
+
+        border-left: 1px solid $darkColor;
+        padding: rem-calc(20px);
+
+        .icon  {            
+          width: 2em;
+          height: 2em;
+          stroke-width: 0;
+          stroke: $darkColor;
+          fill: $darkColor;       
+          
+        }
+      }
+    }
+
+   
+    &__img {  
+      .tomato_img {
+        width: 100%;
+        height: auto;
+        margin: 2px;
+        max-width: 500px;
+      }
+    
+    }
+    
+        
+
+        &__title {
+          position: absolute;
+          width: 110%;
+          right: 20%;
+          color: $whiteColor;
+          font-family: $mainFont;
+          font-size: rem-calc(90px);
+          font-weight: $titleFontw;
+
+          @include _991 {
+            width: 100%;
+            right: 0;
+        }
+          
+          @include _480 {
+            font-size: rem-calc(30px);
+        }
+      }
+
+            
+      
+  }
+  
+
+
+  
+

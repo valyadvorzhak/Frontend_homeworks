@@ -1,0 +1,76 @@
+
+
+.about {
+    background-image: url("img/bg-bl.png");    
+    background-size: cover;
+    background-color: #00c4c4;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 700px;
+
+   
+    &__img {  
+      .rastb_img {
+        width: 105%;
+        height: auto;
+        margin: 2px;
+        max-width: 500px;
+      }
+    
+    }
+    
+        &__textblock {
+          color: $whiteColor;
+          font-family: $mainFont;
+          line-height: rem-calc(27px);          
+        }
+
+        &__title {
+          font-size: rem-calc(90px);
+          font-weight: $titleFontw;
+          
+          @include _480 {
+            font-size: rem-calc(30px);
+        }
+      }
+
+        &__descr {
+          font-size: rem-calc(17px);
+          font-weight: $textFontw;
+
+          @include _767 {
+            text-align: center;
+        }  
+
+          @include _375 {
+            font-size: rem-calc(12px);
+            margin: 0 5px;
+        }
+            
+        }       
+      
+  }
+
+  
+  
+  
+
+
+  
+
+/*&__subtitle {
+  font-size: rem-calc(60px);
+  color: $secondColor;
+  font-weight: $titleFontw;
+  text-align: center;
+  margin-bottom: 55px;
+}*/
+
+
+
+  
+
+
+
+
+

@@ -1,0 +1,84 @@
+.gallery {
+    background-color: $yellowBack;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 1536px;
+
+    @include _991 {      
+        min-height: 50%;         
+        padding-bottom: 2em;
+    }
+
+
+    &__galleryname {
+        color: $darkColor;
+        font-style: $mainFont;
+        line-height: rem-calc(27px);          
+    
+    }
+    
+    .galleryname {  
+        &__title {
+            font-size: rem-calc(90px);
+            font-weight: $titleFontw;
+            margin-bottom: rem-calc(30px);
+
+            @include _480 {
+                font-size: rem-calc(30px);
+                margin-bottom: rem-calc(10px);
+            }
+        }
+
+        &__subtitle {
+            font-size: rem-calc(17px);
+            font-weight: $textFontw;
+            max-width: 60%;
+            text-align: center;
+            margin: 0 auto;
+
+            @include _991 {
+                max-width: 100%;;
+            }
+  
+              
+            @include _375 {
+              font-size: rem-calc(14px);
+              margin: 0 5px;
+          }
+              
+          }     
+        
+    }
+
+    .photos {
+
+      margin: 2em auto;
+
+        &__img {
+            
+            
+
+            @include _767 {
+                margin: 10px 0;
+            }
+        
+            .photos_img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 770px;
+            margin: 0 auto;                            
+          
+            }
+        }
+      
+    }
+
+    &__btn {
+        @extend .base-btn;
+        color: $whiteColor;
+        background-color: $seaColor;
+        margin: 1em auto;       
+    }
+    
+}    

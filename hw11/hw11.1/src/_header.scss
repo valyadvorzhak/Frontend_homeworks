@@ -1,0 +1,194 @@
+.header {
+      background-image: url("img/bg-st-berry.png");    
+      background-size: cover;
+      background-color: $whiteBack;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 1000px;
+      
+
+      @include _991 {
+        background-image: none;
+        min-height: 700px;
+      }
+
+
+      &__mane-menu {
+          min-height: 150px;          
+      }
+      
+        &__left,
+        &__right {
+            position: relative;
+            /* Landscape phone to portrait tablet */
+            @include _767 {
+                text-align: center;
+            }
+            
+            @include _480 {
+                text-align: center;
+            }	       
+        }        
+
+        &__logo {
+            font-family: 'Pacifico', cursive;
+            font-size: rem-calc(50px);
+
+            @include _767 {
+                padding: .5em 0;
+            }
+
+            @include _480 {                
+                padding: .5em 0;                
+            } 
+           
+        }
+
+       
+        .menu {
+            &__label {
+                position: absolute;
+                top: -5.2em;
+                right: rem-calc(15px);
+                cursor: pointer;
+                }
+    
+                span{
+                    position: relative;
+                    width: 2em;
+                    height: 2em;
+                    box-sizing: border-box;
+                    font-size: rem-calc(12px);
+                    background: $darkColor;
+                    -webkit-transition: all .3s ease;
+                }
+    
+                span:hover{
+                    background: #332e2e;
+                }
+    
+                span:before,
+                span:after {
+                    content: '';
+                    position: absolute;
+                    width: 2.2em;
+                    height: .5em;
+                    top: 4px;
+                    left: -0.1em;                    
+                    background: $whiteBack;
+                }
+    
+                 span:after{
+                    top: 14px;
+                }
+
+                #open{
+                    display: none;
+                }
+
+                &__nav {
+                    @include _480 {
+                        height: 0;
+                        overflow: hidden;
+                        -webkit-transition: all .3s ease;
+                        position: absolute;
+                        top: 0px;
+                    }
+                }
+
+                &__nav>a {                
+                    text-decoration: none;
+                    color: $darkColor;
+                    outline: none;
+                    position: relative;
+                    font-size: rem-calc(16px);
+                    font-weight: $titleFontw;
+                    padding: 0 1em;
+                    -webkit-transition: all .3s ease;
+                    
+                    /* Small monitor */
+                    @include _991 {
+                        padding: 0 0.5em;
+                        font-size: rem-calc(14px);                        
+                    }
+
+                    @include _480 {
+                        padding: 0.5em 2em;
+                        display: block;		
+                    }
+                
+                } 
+
+                &__nav>a:hover{
+                    border-top: $orangeColor 2px solid;
+                    text-decoration: none;
+                    color: $darkColor;
+                    
+                    @include _480 {
+                        background: $blackBack;
+                        color: $whiteColor;
+                        border-top: none;        
+                    }
+                
+                }
+
+                .hidden-desktop{
+                    display: none;
+                    @include _480 {
+                        display: block;
+                    }
+                }
+                
+                /* Landscape phones and down */
+                &__checkbox:checked + .menu__nav {
+                @include _480 {                
+                    height: 205px;
+                    width: inherit;
+                } 
+            }
+        }
+
+        &__freshlife-block {
+            @include _991 {
+                text-align: center;
+            }        
+        }
+        
+        &__textblock {
+        color: $darkColor;
+        font-style: $mainFont;
+        line-height: rem-calc(27px);           
+        }
+
+        &__title {
+        font-size: rem-calc(60px);
+        font-weight: $titleFontw;
+        
+            @include _375 {
+                font-size: rem-calc(30px);
+            }
+        }
+
+        &__descr {
+        font-size: rem-calc(17px);
+        font-weight: $textFontw;
+
+            @include _991 {
+            text-align: center;
+            }  
+
+            @include _375 {
+                font-size: rem-calc(12px);
+                margin: 0 5px;
+            }     
+        }
+
+        
+        &__btn {
+            @extend .base-btn;
+            color: $whiteColor;
+            background-color: $orangeColor;
+            margin-top: 2em;
+        }
+
+}  

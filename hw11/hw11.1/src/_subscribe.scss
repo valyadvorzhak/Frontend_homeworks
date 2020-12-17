@@ -1,0 +1,109 @@
+.subscribe {
+    background-image: url("img/bg-blueberry.jpg");    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $whiteBack;
+    font-family: $mainFont;
+    font-weight: $textFontw;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 500px;
+
+    @include _767 {
+        background-image: none;        
+      }
+
+    
+
+    &__formsub {
+        min-height: inherit;
+    }
+
+    &__container {
+        padding-top:  120px !important;
+
+        @include _767 {
+            padding-top:  80px !important;       
+          }
+    
+    }
+
+    &__title {
+        font-size: rem-calc(40px);
+        font-weight: $titleFontw;
+        @include _767 {
+            text-align:  center;       
+          }
+    }
+
+    &__subtitle {
+        font-size: rem-calc(17px);
+        margin-bottom: 1em;
+        
+        @include _767 {
+            text-align:  center;       
+          }
+    }
+
+    .formsub {
+        &__label {
+            display: none;
+        }
+
+        &__input {    
+            width: 100%;
+            color: $darkColor; 
+            padding: 18px;
+        }
+
+        
+        &__controls--submit {          
+            padding: 18px;
+             width: 100%;
+         }
+
+         /* Style for placeholder text */ 
+         &__input::-webkit-input-placeholder {
+        color:$darkColor;
+        font-family: $mainFont;
+        }
+
+        &__input:-moz-placeholder {
+        color:$darkColor;
+        font-family: $mainFont;
+        }
+    }
+
+    /*reject some bootstrap style for button*/
+
+.btn {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.btn--subscribe {
+    @extend .base-btn;
+        color: $whiteColor;
+        background-color: $saladColor; 
+        font-size: rem-calc(20px) !important;  
+        width: 100%;
+        padding: rem-calc(12px);       
+    
+}
+
+.btn--subscribe:focus {
+    border: 2px solid $orangeColor;
+}
+
+.btn--subscribe:hover {
+    background-color: $orangeColor;
+    color: $whiteColor;
+}
+
+
+
+}
