@@ -1,0 +1,261 @@
+/*reject bootstrap style*/
+
+input,
+textarea, 
+select, option {
+  font-family: $mainFont !important; 
+  font-size: rem-calc(15px) !important; 
+  line-height: 1.15 !important; 
+  margin: 0; 
+}
+
+/* Style for placeholder text */ 
+input::-webkit-input-placeholder {
+    color:$whiteColor;
+    font-family: $mainFont;
+}
+
+input:-moz-placeholder {
+    color:$whiteColor;
+    font-family: $mainFont;
+}
+
+textarea::-webkit-input-placeholder {
+    color: $whiteColor;
+    font-family: $mainFont;
+}
+
+textarea:-moz-placeholder {
+    color: $whiteColor;
+    font-family: $mainFont;
+}
+
+
+#message {
+    height: 200px;
+    margin-bottom: 120px;
+    margin-top: 80px;
+    
+}
+
+
+#email {
+    text-transform: none;
+}
+
+
+.contact-page {
+    background-image: url(img/bg.jpg);
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: $mainFont;
+    font-weight: $textFontw;
+    font-size: rem-calc(15px);
+    min-height: 865px;
+    background-size: cover;
+    background-color: $whiteBack;
+
+    @include _991 {
+        min-height: 700px;
+      }
+
+      &__top {
+        max-width: 70%;
+    }
+    
+    .top {
+        &__title {
+            font-size: rem-calc(90px);
+            font-weight: $titleFontw;
+            margin-bottom: rem-calc(30px);
+
+            @include _480 {
+                font-size: rem-calc(30px);
+                margin-bottom: rem-calc(10px);
+            }
+        }
+
+        &__subtitle {
+            font-size: rem-calc(17px);
+            font-weight: $textFontw;
+            max-width: 60%;
+            text-align: center;
+            margin: 0 auto;
+
+            @include _991 {
+                max-width: 100%;;
+            }
+  
+              
+            @include _375 {
+              font-size: rem-calc(14px);
+              margin: 0 5px;
+          }
+              
+          }  
+
+    }       
+
+        
+    
+    
+    .content {
+        &__form{
+            position: relative;  
+        }
+        
+        .form {
+            &__label {
+                display: none;
+            }
+
+            /*my style for input and select*/
+            &__input {
+                background: #00c4c4;
+                opacity: 0.5;
+                border: none;
+                outline: none;
+
+                width: 100%;
+                color: #fff;
+                text-transform: capitalize;
+                margin: 16px 0 0;
+                padding: 18px;
+            }
+
+            &__input:focus {
+                opacity: 1;
+                border-left: #355b82 5px solid;
+                font-weight: 700;
+                padding-left: 13px;
+            }
+            
+            &__error {
+                color: red;
+                font-size: 10px;
+                visibility: hidden;
+            }
+            
+            &__input:invalid+&__error {
+                visibility: visible;
+            }
+
+            &__controls--submit {
+                /* padding-top: 36px;  only for relative*/    
+                 bottom: 40px;
+                 position: absolute; /*button always 40px under column bottom*/
+                 width: 100%;
+             }
+
+        }
+    }    
+    
+}
+
+/*reject some bootstrap style for button*/
+
+.btn {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--primary {    
+    color: $whiteColor !important;
+    
+    width: 100%;
+    border: 2px solid #23ae92 !important;
+    
+}
+
+.btn--primary:focus {
+    border: 2px solid #e66a64;
+}
+
+.btn--primary:hover {
+    background-color: #e66a64;
+}
+
+
+/*contacts*/
+
+.contacts {
+    font-family: $mainFont;
+
+    @include _575 {
+        color: $whiteColor;
+        margin-bottom: 2em;
+        text-align: center;
+    }  
+    
+    
+
+    &__row {
+        margin: 16px 0 0;
+
+        .row_title {
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    
+     p {
+        margin: 0;
+        font-size: 20px;
+    }
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #262626;
+    height: 90px;
+    max-width: 100%;
+    margin: 0 auto;
+    /*top: 860px;*/
+    color: #b9b9b9;
+    font-size: $baseFontSize;
+    
+    .credential {
+
+        &__avtor, &__company {
+            @include _575 {
+                text-align: center;
+            }   
+        }
+
+        &__avtor,  &__company {
+
+            font-family: $mainFont;
+
+            
+            @include _767 {
+                font-size: 12px;
+            }            
+            
+            span {
+            color: red;
+        }
+
+        
+    }
+
+        &__logo {
+            font-family: 'Pacifico', cursive;
+            font-size: rem-calc(25px);
+        }
+        
+        
+    }
+
+}
+
+
+
+
+
+
+
