@@ -1,0 +1,29 @@
+@import 'var';
+@import 'mixines';
+@import 'extends';
+@import 'subscribe';
+@import 'choose';
+
+
+
+html {
+  font-size: $baseFontSize; 
+}
+
+body {
+    margin: 0;
+  }
+  
+  .container {    
+    margin: 0 auto;
+    /*max-width: 1200px;*/
+    padding: 0;
+    /*background-color: #00c210;*/
+    min-height: inherit;
+  }
+  
+ /* @media screen and (min-width: 1200px)  {
+    .container {
+      max-width: 1200px !important;
+    }
+  }*/

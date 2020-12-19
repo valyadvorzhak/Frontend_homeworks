@@ -1,0 +1,153 @@
+.choose {
+    &__place {
+    background-image: url("img/bg-choose.jpg");    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $seaColor;
+    font-family: $mainFont;
+    font-weight: $textFontw;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 1020px;
+    }
+
+    .place {
+        &__row {
+            min-height: inherit;
+        }
+
+        &__textblock {
+            color: $whiteColor;
+            font-family: $mainFont;
+            
+               
+        }
+
+        &__title {
+            font-size: rem-calc(36px);
+            font-weight: $textFontw;
+            margin-bottom: rem-calc(70px);
+            font-family: $secondFont;
+
+            
+            
+                @include _375 {
+                    font-size: rem-calc(24px);
+                }
+            }
+    
+            &__descr {
+            font-size: rem-calc(16px);
+            font-weight: $textFontw;
+            line-height: rem-calc(26px);
+            letter-spacing: .2rem;
+            max-width: 530px; /*optimization for IE11*/
+    
+                @include _991 {
+                text-align: center;
+                }  
+    
+                @include _375 {
+                    font-size: rem-calc(12px);
+                    margin: 0 5px;
+                }
+                
+                div {
+                    margin-bottom: 1rem;
+                }
+            }
+    
+            
+            &__btn {
+                @extend .base-btn;
+                color: $whiteColor;                
+                margin-top: 2em;
+                max-width: 225px;
+                padding: rem-calc(15px) rem-calc(25px);
+            }
+
+            &__img {
+
+                
+            @include _767 {
+                margin: 10px 0;
+            }
+                
+                .mounain_img {
+                    @include _375 {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        max-width: 350px;
+                        margin: 0 auto;   
+                    }                                            
+                }
+            }
+    }
+
+
+    &__icons {       
+        background-color: $brownback;
+        font-family: $secondFont;
+        font-weight: $textFontw;
+        color: $whiteColor;
+        font-size: rem-calc(36px);
+        width: 100%;
+        margin: 0 auto;
+        min-height: 337px;
+    }
+
+    .icons {
+        &__container {
+            padding-top: 100px;
+        }
+
+        &__step {
+            position: relative;
+
+            &::after {
+                content: url("img/path.png");
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            @include _767 {
+                margin-bottom: 1em;
+            }
+            
+        }
+
+        .step {
+
+            &__icon  {            
+                width: 2em;
+                height: 2em;
+                stroke-width: 0;                               
+                
+                &--search {
+                    stroke: $buttonBack; 
+                    fill: $buttonBack;
+                }
+
+                &--check {                   
+                    stroke: $redIcon; 
+                    fill: $redIcon;
+                }
+
+                &--like-2 {                   
+                    stroke: $blueBack; 
+                    fill: $blueBack;
+                }
+
+                
+              }
+        }
+
+    }
+
+
+
+}

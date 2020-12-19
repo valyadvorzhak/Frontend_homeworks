@@ -1,0 +1,8 @@
+.base-btn {
+    font-size: rem-calc(14px);
+    padding: rem-calc(15px) 0;
+    text-align: center;    
+    box-sizing: border-box !important;  
+    font-family: $secondFont;
+    background-color: $buttonBack;
+}
