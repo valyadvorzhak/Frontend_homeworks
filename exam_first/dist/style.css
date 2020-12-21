@@ -2,7 +2,8 @@
   font-size: 0.875rem;
   padding: 0.9375rem 0;
   text-align: center;
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
   font-family: "Aleo", serif;
   background-color: #5474fd;
 }
@@ -11,11 +12,13 @@
   color: #000000;
 }
 .base-btn:focus, .propose .country .card__btn:focus, .propose .review .card__btn:focus, .choose .place__btn:focus, .subscribe .btn--subscribe:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 .base-btn:active, .propose .country .card__btn:active, .propose .review .card__btn:active, .choose .place__btn:active, .subscribe .btn--subscribe:active {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
@@ -179,6 +182,14 @@
   bottom: 100px;
 }
 
+.header__container {
+  /*style for IE11 */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header__container {
+    padding-top: 25px !important;
+  }
+}
 .header__left, .header__right {
   position: relative;
   /* Landscape phone to portrait tablet */
@@ -216,7 +227,9 @@
 }
 @media screen and (max-width: 480px) {
   .header__mane-menu {
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 .header__mane-menu .menu {
@@ -232,7 +245,8 @@
   position: relative;
   width: 2em;
   height: 2em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 0.75rem;
   background: #fff;
   -webkit-transition: all 0.3s ease;
@@ -330,6 +344,14 @@
   margin: 0 auto;
   min-height: 1020px;
 }
+.choose .place__container {
+  /*style for IE11 */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .choose .place__container {
+    padding-top: 120px !important;
+  }
+}
 .choose .place__row {
   min-height: inherit;
 }
@@ -421,7 +443,9 @@
 }
 @media screen and (max-width: 1200px) {
   .choose .icons__step--check::before {
-    transform: scaleX(0.8);
+    -webkit-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
+            transform: scaleX(0.8);
   }
 }
 @media screen and (max-width: 991px) {
@@ -437,7 +461,9 @@
 }
 @media screen and (max-width: 1200px) {
   .choose .icons__step--like::before {
-    transform: scaleX(0.8);
+    -webkit-transform: scaleX(0.8);
+        -ms-transform: scaleX(0.8);
+            transform: scaleX(0.8);
   }
 }
 @media screen and (max-width: 991px) {

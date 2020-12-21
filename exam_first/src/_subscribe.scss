@@ -192,6 +192,15 @@
 
 .header {
 
+    &__container {
+
+        /*style for IE11 */
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            padding-top: 25px !important;
+        }
+       
+    }
+
     &__left, &__right {
           position: relative;
           /* Landscape phone to portrait tablet */
