@@ -1,10 +1,22 @@
-.base-btn, .choose .place__btn, .subscribe .btn--subscribe {
+.base-btn, .propose .country .card__btn, .propose .review .card__btn, .choose .place__btn, .subscribe .btn--subscribe {
   font-size: 0.875rem;
   padding: 0.9375rem 0;
   text-align: center;
   box-sizing: border-box !important;
   font-family: "Aleo", serif;
   background-color: #5474fd;
+}
+.base-btn:hover, .propose .country .card__btn:hover, .propose .review .card__btn:hover, .choose .place__btn:hover, .subscribe .btn--subscribe:hover {
+  background-color: #ff6033;
+  color: #000000;
+}
+.base-btn:focus, .propose .country .card__btn:focus, .propose .review .card__btn:focus, .choose .place__btn:focus, .subscribe .btn--subscribe:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.base-btn:active, .propose .country .card__btn:active, .propose .review .card__btn:active, .choose .place__btn:active, .subscribe .btn--subscribe:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .subscribe {
@@ -18,6 +30,7 @@
   width: 100%;
   margin: 0 auto;
   min-height: 740px;
+  position: relative;
   /*reject some bootstrap style for button*/
 }
 .subscribe__formsub {
@@ -28,7 +41,7 @@
 }
 .subscribe__suscribename {
   color: #fff;
-  font-style: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .subscribe .suscribename__title {
   font-size: 3rem;
@@ -141,19 +154,29 @@
   cursor: pointer;
   border-radius: 0;
 }
+.subscribe .btn__icon {
+  width: 1.5em;
+  height: 1.5em;
+  stroke-width: 0;
+  stroke: #fff;
+  fill: #fff;
+}
 .subscribe .btn--subscribe {
   color: #fff;
   width: 100%;
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem 1.25rem;
   background-color: #5474fd;
 }
 .subscribe .btn--subscribe:focus {
-  border: 2px solid #000000;
-  padding: 1rem 2.5rem;
+  background-color: lime;
 }
-.subscribe .btn--subscribe:hover {
-  background-color: #ff6033;
-  color: #000000;
+.subscribe .scroll, .subscribe .scroll a {
+  color: #fff;
+}
+.subscribe .scroll {
+  /*position: absolute;*/
+  position: relative;
+  bottom: 100px;
 }
 
 .header__left, .header__right {
@@ -348,6 +371,7 @@
   margin-bottom: 1rem;
 }
 .choose .place__btn {
+  font-size: 1rem;
   color: #fff;
   margin-top: 2em;
   max-width: 225px;
@@ -382,17 +406,43 @@
 }
 .choose .icons__step {
   position: relative;
-}
-.choose .icons__step::after {
-  content: url("img/path.png");
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+  /*arc to show path for order*/
 }
 @media screen and (max-width: 767px) {
   .choose .icons__step {
     margin-bottom: 1em;
+  }
+}
+.choose .icons__step--check::before {
+  content: url("img/path.png");
+  display: block;
+  position: absolute;
+  left: -180px;
+}
+@media screen and (max-width: 1200px) {
+  .choose .icons__step--check::before {
+    transform: scaleX(0.8);
+  }
+}
+@media screen and (max-width: 991px) {
+  .choose .icons__step--check::before {
+    display: none;
+  }
+}
+.choose .icons__step--like::before {
+  content: url("img/path.png");
+  display: block;
+  position: absolute;
+  left: -180px;
+}
+@media screen and (max-width: 1200px) {
+  .choose .icons__step--like::before {
+    transform: scaleX(0.8);
+  }
+}
+@media screen and (max-width: 991px) {
+  .choose .icons__step--like::before {
+    display: none;
   }
 }
 .choose .icons .step__icon {
@@ -411,6 +461,198 @@
 .choose .icons .step__icon--like-2 {
   stroke: #70bfff;
   fill: #70bfff;
+}
+
+.propose__country {
+  min-height: 700px;
+}
+.propose__country--top {
+  background-image: url("img/bg-country--top.jpg");
+}
+.propose__country--bottom {
+  background-image: url("img/bg-country--bottom.jpg");
+}
+.propose__country, .propose__testimonial {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #5585a2;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400 !important;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+.propose .country__container, .propose .review__container {
+  padding-top: 230px;
+}
+@media screen and (max-width: 480px) {
+  .propose .country__container, .propose .review__container {
+    padding-top: 115px;
+  }
+}
+.propose .country__card, .propose .review__card {
+  background-color: rgba(35, 35, 35, 0.9);
+  padding: 50px;
+  min-height: 370px;
+}
+.propose .country__card--user, .propose .review__card--user {
+  min-height: 284px;
+  max-width: 664px;
+}
+.propose .country .card__name, .propose .country .card__hotel, .propose .review .card__name, .propose .review .card__hotel {
+  font-size: 1.25rem;
+}
+.propose .country .card__desc, .propose .review .card__desc {
+  font-size: 1rem;
+  margin: 2em 0;
+  position: relative;
+  max-width: 380px;
+  /*optimization for IE11*/
+}
+.propose .country .card__desc--user, .propose .review .card__desc--user {
+  max-width: 550px;
+  /*optimization for IE11*/
+  margin-bottom: 0;
+}
+.propose .country .card__desc i, .propose .review .card__desc i {
+  color: #5474fd;
+  margin-right: 0.5em;
+  bottom: 0.5em;
+  position: relative;
+}
+@media screen and (max-width: 375px) {
+  .propose .country .card__desc, .propose .review .card__desc {
+    font-size: 0.875rem;
+  }
+}
+.propose .country .card__btn, .propose .review .card__btn {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 2em;
+  max-width: 225px;
+  padding: 0.9375rem 1.5625rem;
+}
+.propose__testimonial {
+  background-image: url("img/bg-testimonial.jpg");
+  min-height: 731px;
+}
+.propose .testimonial__container {
+  padding-top: 115px;
+}
+@media screen and (max-width: 480px) {
+  .propose .testimonial__container {
+    padding-top: 60px;
+  }
+}
+.propose .testimonial__container h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  font-family: "Aleo", serif;
+}
+.propose .testimonial__feedback {
+  max-height: 284px;
+}
+@media screen and (max-width: 1200px) {
+  .propose .testimonial__feedback {
+    max-height: none;
+  }
+}
+.propose .testimonial__user {
+  padding-right: 0;
+}
+@media screen and (max-width: 991px) {
+  .propose .testimonial__user {
+    padding-right: 15px;
+  }
+}
+.propose .testimonial__review {
+  padding-left: 0;
+}
+@media screen and (max-width: 991px) {
+  .propose .testimonial__review {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .propose .testimonial .user__img {
+    margin: 10px 0;
+  }
+}
+.propose .testimonial .user__img .user-img {
+  max-width: 445px;
+  width: 100%;
+  height: 100%;
+  min-height: 284px;
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .propose .testimonial .user__img .user-img {
+    max-width: 320px;
+    margin: 0 auto;
+    height: auto;
+    min-height: auto;
+  }
+}
+
+.footer {
+  background-color: #333333;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 268px;
+}
+.footer__container {
+  padding-top: 115px !important;
+}
+.footer .suscribename__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .footer .suscribename__title {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+  }
+}
+.footer .suscribename__subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  max-width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  .footer .suscribename__subtitle {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer .suscribename__subtitle {
+    font-size: 0.875rem;
+    margin: 0 5px;
+  }
+}
+.footer__iconblock {
+  color: #fff;
+  max-width: 200px;
+}
+@media screen and (max-width: 767px) {
+  .footer__iconblock {
+    margin-top: 1em;
+  }
+}
+.footer__iconblock a {
+  color: #fff;
+}
+.footer__iconblock i:hover, .footer__iconblock i:focus {
+  color: #5474fd;
 }
 
 html {

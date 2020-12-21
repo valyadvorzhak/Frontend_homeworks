@@ -9,7 +9,7 @@
     width: 100%;
     margin: 0 auto;
     min-height: 740px;
-
+    position: relative;
    
     
 
@@ -25,7 +25,7 @@
 
     &__suscribename {
         color: $whiteColor;
-        font-style: $mainFont;                
+        font-family: $mainFont;                
     
     }
 
@@ -153,27 +153,38 @@
     outline: none;
     cursor: pointer;
     border-radius: 0;
+
+    &__icon  {            
+        width: 1.5em;
+        height: 1.5em;
+        stroke-width: 0;
+        stroke: $whiteColor; 
+        fill: $whiteColor;                            
+        }
 }
 
 .btn--subscribe {
     @extend .base-btn;
         color: $whiteColor;       
         width: 100%;
-        padding: rem-calc(20px) rem-calc(40px);       
-        background-color: $buttonBack;
-}
+        padding: rem-calc(20px) rem-calc(20px);       
+        background-color: $buttonBack;     
+        
+    }
 
 .btn--subscribe:focus {
-    border: 2px solid $darkColor;
-    padding: rem-calc(16px) rem-calc(40px);
+    background-color: lime;
 }
 
-.btn--subscribe:hover {
-    background-color: $orangeColor;
-    color: $darkColor;
-}
+    .scroll, .scroll a {
+        color: $whiteColor;
+    }
 
-
+    .scroll {
+        /*position: absolute;*/
+        position: relative;
+        bottom: 100px;
+    }
 
 }
 

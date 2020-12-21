@@ -61,6 +61,7 @@
             
             &__btn {
                 @extend .base-btn;
+                font-size: rem-calc(16px);
                 color: $whiteColor;                
                 margin-top: 2em;
                 max-width: 225px;
@@ -106,17 +107,54 @@
         &__step {
             position: relative;
 
-            &::after {
-                content: url("img/path.png");
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
             @include _767 {
                 margin-bottom: 1em;
             }
+
+            /*arc to show path for order*/
+            &--check {
+
+            &::before {
+                content: url("img/path.png");
+                display: block;
+                position: absolute;
+                left: -180px;
+                
+                @include _1200 {
+                    transform: scaleX(0.8);
+                }
+
+                @include _991 {
+                    display: none;
+                }
+
+                
+            }
+        }
+
+
+
+        &--like {
+
+            &::before {
+                content: url("img/path.png");
+                display: block;
+                position: absolute;
+                left: -180px;
+                
+                @include _1200 {
+                    transform: scaleX(0.8);
+                }
+
+                @include _991 {
+                    display: none;
+                }
+
+                
+            }
+        }
+
+            
             
         }
 
@@ -147,7 +185,5 @@
         }
 
     }
-
-
 
 }

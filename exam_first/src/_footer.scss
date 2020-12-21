@@ -1,0 +1,72 @@
+.footer {
+    background-color: $brownback;
+    font-family: $mainFont;
+    font-weight: $textFontw;
+    font-family: $mainFont; 
+    color: $whiteColor;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 268px;
+
+
+
+    &__container {
+        padding-top:  115px !important;           
+     
+    }
+
+   
+    .suscribename {  
+        &__title {
+            font-size: rem-calc(24px);
+            font-weight: $textFontw;
+            letter-spacing: .3rem;
+            margin-bottom: 0;            
+
+            @include _480 {
+                font-size: rem-calc(18px);
+                margin-bottom: rem-calc(10px);
+            }
+        }
+
+        &__subtitle {
+            font-size: rem-calc(16px);
+            font-weight: $textFontw;
+            letter-spacing: .1rem;
+            max-width: 60%;
+            text-align: center;
+            margin: 0 auto;
+
+            @include _991 {
+                max-width: 100%;;
+            }  
+              
+            @include _375 {
+              font-size: rem-calc(14px);
+              margin: 0 5px;
+          }
+              
+          }     
+        
+    }
+
+    &__iconblock {
+        color: #fff;
+        max-width: 200px;
+
+        @include _767 {
+            
+            margin-top: 1em;
+        }
+
+        & a {
+            color: #fff;
+        }
+        
+        & i:hover, & i:focus {
+            color: $buttonBack;    
+         }
+    }
+
+}
+

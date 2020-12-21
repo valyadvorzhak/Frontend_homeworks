@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/fontawesome/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Exam first</title>
 </head>
 
 <body>
     <header class="d-flex flex-column">
-        <div class="header_subscribe subscribe">
+        <div class="header__subscribe subscribe">
             <form action="#" method="get" class="formsub subscribe__formsub">
                 <div class="container subscribe__container">
                     <div class="suscribename subscribe__suscribename  px-3 py-3 pb-md-5 mx-auto text-center">
@@ -34,12 +36,20 @@
                         </div>
                         <div class="subscribe__button d-flex align-items-center">
                             <div class="formsub__controls formsub__controls--submit ">
-                                <button type="submit" class="btn btn--subscribe">SEARCH</button>
+                                <button type="submit" class="btn btn--subscribe">SEARCH
+                                    <span><svg class="btn__icon">
+                                            <use xlink:href="img/icons.svg#icon-search"></use>
+                                        </svg></span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
+            <div class="scroll pb-5 mx-auto text-center d-flex flex-column">
+                <span class="down">Scroll Down</span>
+                <a href="#footer"><i class="fas fa-chevron-down"></i></a>
+            </div>
         </div>
 
         <div class="header__mane-menu">
@@ -110,13 +120,15 @@
                                     <use xlink:href="img/icons.svg#icon-search"></use>
                                 </svg></span>
                         </div>
-                        <div class="step icons__step col-md-4 d-flex flex-column  mx-auto text-center">
+                        <div
+                            class="step icons__step icons__step--check col-md-4 d-flex flex-column  mx-auto text-center">
                             <span> Select Places</span>
                             <span><svg class="step__icon step__icon--check">
                                     <use xlink:href="img/icons.svg#icon-check"></use>
                                 </svg></span>
                         </div>
-                        <div class="step icons__step col-md-4 d-flex flex-column  mx-auto text-center">
+                        <div
+                            class="step icons__step icons__step--like col-md-4 d-flex flex-column  mx-auto text-center">
                             <span> Book&Enjoy</span>
                             <span><svg class="step__icon step__icon--like-2">
                                     <use xlink:href="img/icons.svg#icon-like-2"></use>
@@ -127,7 +139,99 @@
             </div>
 
         </div>
+        <div class="propose">
+            <div class="country propose__country propose__country--top">
+                <div class="container  country__container">
+                    <div class="row">
+                        <div class="left col-lg-6">
+                            <div class="card country__card d-flex flex-column align-items-center align-items-md-start">
+                                <p class="card__name">Spain</p>
+                                <h3 class="card__hotel mx-auto text-center  text-md-left mx-md-0">GRAND SPAIN MADRID
+                                </h3>
+                                <div class="card__desc  mx-auto text-center text-md-left mx-md-0">
+                                    But I must explain to you how all this mistaken idea of account to denouncing
+                                    pleasure and praising pain was account born and I account will give you a complete
+                                    account of the system
+                                </div>
+                                <div class="card__btn ">BOOK NOW</div>
+                            </div>
+                        </div>
+                        <div class="right col-lg-6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="country propose__country propose__country--bottom">
+                <div class="container country__container">
+                    <div class="row">
+                        <div class="left  col-lg-6"></div>
+                        <div class="right col-lg-6">
+                            <div class="card country__card d-flex flex-column align-items-center align-items-md-start">
+                                <p class="card__name">Spain</p>
+                                <h3 class="card__hotel mx-auto text-center  text-md-left mx-md-0">GRAND SPAIN MADRID
+                                </h3>
+                                <div class="card__desc  mx-auto text-center text-md-left mx-md-0">
+                                    But I must explain to you how all this
+                                    mistaken
+                                    idea of account to denouncing
+                                    pleasure and praising pain was account born and I account will give you a complete
+                                    account of the system
+                                </div>
+                                <div class="card__btn ">BOOK NOW</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial propose__testimonial">
+                <div class="container testimonial__container">
+                    <div class="testimonial__testname  px-3 pb-5 pb-md-5 mx-auto text-center">
+                        <h2 class="testimonial__title">What Our Tourist Say</h2>
+                    </div>
+                    <div class="testimonial__feedback row">
+                        <div
+                            class="user testimonial__user col-xl-5 justify-content-center justify-content-xl-end mb-3 mb-xl-0">
+                            <div class="user__img d-flex justify-content-center justify-content-xl-end">
+                                <img class="user-img" src="./img/img-user.jpg" alt="user photo">
+                            </div>
+                        </div>
+                        <div
+                            class="review  testimonial__review col-xl-7 d-flex justify-content-center justify-content-xl-start mb-5 mb-xl-0">
+                            <div
+                                class="card review__card review__card--user d-flex flex-column align-items-center align-items-md-start">
+                                <h3 class="card__hotel mx-auto text-center  text-md-left mx-md-0">SAM SUMON
+                                </h3>
+                                <div class="card__desc  card__desc--user mx-auto text-center text-md-left mx-md-0">
+                                    <i class="fas fa-quote-left fa-2x"></i>But I must explain to you how all this
+                                    mistaken idea of account to denouncing
+                                    pleasure and praising pain was account born and I account will give you a complete
+                                    account of the system
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer class="footer" id="footer">
+        <div class="container footer__container">
+            <div class="footername footer__footername  px-3 pb-md-3 mx-auto text-center">
+                <p class="suscribename__title">BHROMAON</p>
+                <p class="suscribename__subtitle">Safe Travel Anywhere</p>
+            </div>
+            <div class="iconblock footer__iconblock  d-flex justify-content-between  px-3 pb-md-5 mx-auto text-center">
+                <a href="https://www.facebook.com/airbnb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/search?q=Airbnb&src=typeahead_click"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
 
