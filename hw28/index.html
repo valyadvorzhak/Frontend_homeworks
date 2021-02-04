@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+   
+    <div class="container">
+     <div class="traffic">
+        <div id="main" class="lights">
+            <div id = "red" class="light red">&nbsp;</div>
+            <div id="yellow" class = "light">&nbsp;</div>
+            <div id = "green" class="light">&nbsp;</div>
+        </div>
+          
+        <button id="go">GO!</button>   
+
+     </div>
+     <div class="modal">
+     <a href="#win1" onclick="openModal()" class="button button-orange">Open window </a>
+     <a href="#x" class="overlay" id="win1"></a>
+    <div class="popup">
+        <iframe title=" Iframe  modal window displays a site with an address" style="border:none"  width="560" height="315" src="https://imgix.bustle.com/uploads/getty/2020/1/9/15410aa0-52e9-4dc0-9127-3e7810d13254-getty-1187495570.jpg?w=800&fit=crop&crop=faces&auto=format%2Ccompress"   allow="fullscreen"> </iframe>
+  
+     
+        <a class="close" onclick="closeModal()" title="Close" href="#close" ></a>
+    </div>
+</div>
+     <div id="content">  </div>   
+     
+    </div>
+      
+      <style>
+          body {
+
+            background-image: url("img/gallery_nullabor-plain-road-trip-australia1.jpg");
+            background-image: no-repeat;     
+            background-size: 100%;
+          }
+      
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;                  
+            padding: 50px;            
+        }
+        
+        .lights {
+            margin: 0 auto;
+            width: 60px;
+            height: 200px;
+            padding: 10px 5px;            
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            border-radius: 0.5rem;
+        }
+
+        .light {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          border: 2px solid #fff;
+          background-color: #666;
+        }
+
+        
+        
+        .red {
+            background-color: #FF0000;
+        }
+
+       
+
+        .yellow {
+            background-color: #FFFF00;
+        }
+
+        
+        .green {
+             background-color: #00FF00;
+        }
+
+        #go {
+            margin: auto;
+            margin-top: 20px;
+            padding: 5px 15px;
+        }
+
+        #content {
+            display: flex;            
+            flex-direction: column;          
+            
+        }
+
+        /* button */
+
+        .button {
+            font-size: 20px;
+            color: white;
+            width: 150px;
+            height: 35px;
+            text-decoration: none;
+            padding: 10px 5px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            transition: all 0.3s;            
+            cursor: pointer;    
+
+            }
+
+        .button-orange {
+            background-color: orangered;
+            }
+
+        .button:hover {
+            background-color: #5555ff;
+            box-shadow:0 0 10px 10px #b7b7ff inset;
+        }  
+
+        .button:active {
+            background-color: #0000ff;
+            box-shadow:0 0 0 0 #ffffff; 
+        } 
+
+        .overlay {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            visibility: hidden;
+            /*background blackout*/
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            position: fixed; /* fixed positioning */
+            cursor: default; /* type of cursor */
+            -webkit-transition: opacity .5s;
+            -moz-transition: opacity .5s;
+            -ms-transition: opacity .5s;
+            -o-transition: opacity .5s;
+            transition: opacity .5s;
+        }
+
+        .overlay--target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*  frame */
+            iframe {
+            top: 0;
+            right: 0;
+            bottom: 0; 
+            left: 0; 
+            display:block;
+            margin: auto;
+            min-width: 320px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /*** Create modal window styles ***/
+        .popup {
+        top: 0;
+        right: 0;
+        left: 0;
+        font-size: 14px;
+        z-index: 10;
+        display: block;
+        visibility: hidden;
+        margin: 0 auto;
+        width: 90%;
+        min-width: 320px;
+        max-width: 600px;
+        /* fixed positioning, the window is stable when scrolling */
+        position: fixed;
+        padding: 15px;
+        border: 1px solid #383838;
+        /* corner rounding */
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        /* outer shadow of a block */
+        -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+        -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+        -o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+        /*full window transparency, appearance on click */
+        opacity: 0;
+        /* transition effect (appearance) */
+        -webkit-transition: all ease .5s;
+        -moz-transition: all ease .5s;
+        -ms-transition: all ease .5s;
+        -o-transition: all ease .5s;
+        transition: all ease .5s;
+        }
+
+        /* activate the appearance of the window and darkening the background*/
+        .popup--target {
+        top: 20%; /* the position of the window from the top of the page when it appears */
+        visibility: visible;
+        opacity: 1; /* remove transparency */
+        }
+
+        /* form the close button */
+        .close {
+        position: absolute;
+        top: -10px;
+        right: -10px;padding: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        border-radius: 15px;
+        background-color: rgba(61, 61, 61, 0.8);
+        -webkit-box-shadow: 0px 0px 10px #000;
+        -moz-box-shadow: 0px 0px 10px #000;
+        box-shadow: 0px 0px 10px #000;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 20px;
+        /* set the values and transition effect when hovering*/
+        -webkit-transition: all ease .8s;
+        -moz-transition: all ease .8s;
+        -ms-transition: all ease .8s;
+        -o-transition: all ease .8s;
+        transition: all ease .8s;
+        }
+        .close:before {
+        color: rgba(255, 255, 255, 0.9);
+        content: "X";
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        font-size: 12px;
+        }
+        .close:hover {
+        background-color: rgba(252, 20, 0, 0.8);
+        /* turn the button when you hover*/
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);    
+        }     
+
+    </style>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
