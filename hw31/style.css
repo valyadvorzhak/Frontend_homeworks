@@ -1,0 +1,120 @@
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+.head {
+  margin: 0 auto;
+  padding: 10px 15px;
+  text-align: center;
+  width: 65%;
+  margin-top: 60px;
+  margin-bottom: 105px;
+}
+
+.head__top {
+  font-size: 18px;
+  font-weight: 100;
+  color: #303030;
+}
+
+.head__main {
+  font-size: 86px;
+  line-height: 90px;
+}
+
+.content {
+  padding-left: 140px;
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.slider .slide {
+  /*height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+  margin-right: 44px;
+  position: relative;
+}
+
+.slide__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 445px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+  .slide__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.slide .article__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.slide .article__overlay {
+  background: #1bf1ad;
+  opacity: 0;
+}
+
+.slide .article__overlay:hover {
+  opacity: 0.7;
+}
+
+.slide .article__wrapper {
+  position: absolute;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  bottom: 10%;
+  left: 10%;
+  display: none;
+}
+
+.slide .article__overlay:hover + div {
+  display: block;
+}
+
+.harf {
+  opacity: 0.3;
+}
+
+.title {
+  font-size: 28px;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+.description {
+  max-width: 200px;
+  font-size: 12px;
+}
+
+.slider__prev,
+.slider__next {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+}
+
+.slider__next {
+  right: 20px;
+}
+
+.slider__prev {
+  left: 20px;
+}
