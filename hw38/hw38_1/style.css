@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 57px 57px;
+  grid-template-areas:
+    "big big small"
+    "big big smaii1"
+    "call call1 call2";
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.big {
+  grid-area: big;
+}
+
+.small {
+  grid-area: small;
+}
+
+.smaii1 {
+  grid-area: smaii1;
+}
+
+.call {
+  grid-area: call;
+}
+
+.call1 {
+  grid-area: call1;
+}
+
+.call2 {
+  grid-area: call2;
+}
+
+.grid-2 {
+  width: 1700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  margin-top: 80px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.grid-2 span {
+  position: relative;
+  font-size: 0;
+}
+
+.grid-2 span > .plus {
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: 1;
+}
+
+.image:hover {
+  filter: grayscale(100%) blur(5px);
+}
+
+.grid-2 span:hover > .plus {
+  opacity: 1;
+}
+
+.grid-2 span > .plus:hover + .image {
+  filter: grayscale(100%) blur(5px);
+}
