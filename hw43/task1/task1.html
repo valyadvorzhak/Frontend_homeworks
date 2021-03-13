@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+
+<body>
+   
+    <div id="app">
+        <h1>Vue.js Color`s List App</h1>
+        <ol  style = "margin-top: 30px">
+            <li><span>Choose color from <b>List of colors</b> and type it into <b>Input</b></span></li>
+            <li><span>Click <b>Type button</b> to type color from input bellow input. </span>
+            (If color is not in List the same color text will type but with warning!!!)</li> 
+            <li><span>If you want to add new color to <b>List of colors</b> type it into <b>Input</b>
+            and click <b>Add button.</b> (If color is already in List, the same color warning will type).</span></li>
+            <li><span>Try to type new color using <b>Type button</b> </span></li>    
+        </ol>       
+
+        <ol>            
+            <li v-for="(color,i) in colors" :key="i">
+                {{ color }}
+            </li>
+        </ol>
+
+        <input v-model="search" type="text">
+        <button @click="saveSearch">Type color!</button>
+        <button @click="addSearch">Add color to List!</button>
+        <br>
+        <div v-show="typedSearchIsShown">
+            <span :style="{color: value}"> 
+            {{typedSearch}}
+            </span>
+        </div>
+
+       
+    </div>
+    <script src="script.js"></script>
+
+
+    
+</body>
+
+</html>

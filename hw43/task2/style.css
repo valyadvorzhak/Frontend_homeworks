@@ -1,0 +1,21 @@
+ul {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.vue-custom-tooltip.is-underlined {
+  border-bottom: 1px solid pink !important;
+}
+.vue-custom-tooltip:after {
+  font-size: 16px !important;
+  color: #1f0104;
+  background-color: rgb(248, 176, 218);
+  font-weight: 700;
+  font-style: italic;
+  box-shadow: 3px 1px 3px #000333;
+}
+.vue-custom-tooltip.is-right:before {
+  border-right: 7px solid rgb(248, 176, 218);
+  left: 100%;
+  color: rgb(248, 176, 218);
+}
