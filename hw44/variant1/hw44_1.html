@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <!--Вариант 1. Компонент только кнопка-->
+    <div class="container">
+        <div id="app">
+            <div class="form-group">
+                <label for="resultInput" class="form-label">Input number:</label>
+                <input  @blur="saveSearch" v-model.number="result" placeholder="....." id="resultInput" class="form-control" type = "number">
+
+                
+                <button-counter class="btn btn-info" :message="parentMessage.increment" v-on:in-de-crement="incrementTotal"></button-counter>
+                <button-counter class="btn btn-info" :message="parentMessage.decrement" v-on:in-de-crement="decrementTotal"></button-counter>
+                <p class="container-fluid"> Result: {{ total }}</p>
+                
+            </div>
+            
+            
+         
+            
+        </div>
+        <script>
+            Vue.component('button-counter', {
+                props: ['message'],
+                template: '<button  v-on:click="difCounter">{{message}}</button>',
+                
+                methods: {
+                    difCounter: function () {
+                        //this - ссылается на данный компонент                      
+                        // Генерация события в дочернем компоненте.
+                        this.$emit('in-de-crement')
+                    }
+                   
+                },
+            })
+            var sample = new Vue({
+                el: '#app',
+                data: {
+                    total: 0,
+                    result: '',
+                    focused: false,
+                    parentMessage: {
+                        increment: "increment",
+                        decrement: "decrement"
+                    }
+                },
+                methods: {
+                    saveSearch() {
+                    this.total = this.result;
+                    this.result = "";
+                   
+                    },
+
+                    incrementTotal () {
+                        this.total += 1
+                    },
+
+                    decrementTotal () {
+                        this.total -= 1
+                    }
+                }                
+            })
+        </script>
+    </div>
+</body>
+
+</html>

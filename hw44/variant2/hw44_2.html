@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <!--Вариант 2. Все элементы одним компонентом, как вариант, его можно переиспользвать, но в т.з не было указано-->
+    <div class="container">
+        <div id="app">
+            <div class="form-group">
+            
+                <in-de-counter  
+                :result = "result1" 
+                :total = "total1" 
+                @save-input = "saveSearch()"    
+                @increment = "incrementTotal()"  
+                @decrement = "decrementTotal()">                   
+                </in-de-counter>             
+              
+            </div>        
+           
+        </div>
+        <script>
+            Vue.component('in-de-counter', {
+                props: ['total', 'result'],
+                template: ` <div class="mb-3">
+                <label for="resultInput" class="form-label">Input number:</label>
+                             <input  @blur="saveInput" v-model="result" placeholder="....." id="resultInput" class="form-control">
+                            <button  class="btn btn-info" v-on:click="incrementCounter">Increment</button>
+                             <button  class="btn btn-info" v-on:click="decrementCounter">Decrement</button>
+                             <p class="container-fluid">Result: {{total}}</p>
+                            </div> `,                
+                 
+                
+                methods: {
+                    incrementCounter: function () {
+                        //this - ссылается на данный компонент                   
+                        
+                        this.$emit('increment', total);
+                    },
+                    decrementCounter: function () {
+                        //this - ссылается на данный компонент                      
+                        
+                        this.$emit('decrement', total);
+                    },
+                    saveInput() {
+                       /* this.total = +this.result;
+                        this.result = "";*/
+                        this.$emit('save-input')
+                    }
+                   
+                },
+            })
+            var sample = new Vue({
+                el: '#app',
+                data: {
+                    total1: 0,
+                    result1: ''
+                  
+                },
+                methods: {
+                    saveSearch() {
+                    this.total1 = this.result1;
+                    this.result1 = "";
+                   
+                    },
+
+                    incrementTotal () {
+                        this.total1 += 1
+                    },
+
+                    decrementTotal () {
+                        this.total1 -= 1
+                    }
+                }                
+            })
+        </script>
+    </div>
+</body>
+
+</html>
