@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
+
+html,
+body {
+  height: 100%;
+  background: ghostwhite;
+}
+
+.deck {
+  margin-left: 30px;
+  padding-top: 30px;
+  height: auto;
+  display: inline-block;
+}
+
+.wrapper {
+  height: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+}
+.card {
+  width: 75px;
+  height: 100px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.card--back {
+  background-image: url("img/2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__suit {
+  width: 100%;
+  display: block;
+}
+
+.card__suit--top {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.card__suit--bottom {
+  position: absolute;
+  bottom: 0px;
+  text-align: left;
+  transform: rotate(180deg);
+  padding-left: 5px;
+}
+
+.card__number {
+  width: 100%;
+  position: absolute;
+  top: 38%;
+  text-align: center;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.black {
+  color: #000;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 400px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 75px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
