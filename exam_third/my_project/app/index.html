@@ -16,7 +16,7 @@
     
 </head>
 <body>
-    <header class="header">
+    <header id ="header" class="header">
 
         <div class="header__mane-menu">
             
@@ -57,7 +57,7 @@
                     <p class="introname__subtitle text-center text-md-right">Choose Wisely. Chose CBD.</p>
                 </div>             
                 <div class="intro__btn "><span>START SHOPPING</span></div>
-                <div class = "intro__products"><span>See all products</span><i class="fas fa-long-arrow-alt-right"></i></div>         
+                <div class = "intro__products d-flex align-items-center"><span>See all products</span><a href="#product-all"><i class="fas fa-long-arrow-alt-right fa-2x"></i></a></div>         
          </div>       
     
     </div>
@@ -415,7 +415,10 @@
                    </div>
                    <div class="testimonial__label label">           
                        <div class="label__wrapper wrapper">
-                           <div class="label__text text">CBD EVERY DAY</div>                   
+                           <a href="#header"> 
+                            <div class="label__text text">CBD EVERY DAY</div>
+                           </a>
+                                              
                        </div>            
                     </div>            
             </div>           
@@ -483,6 +486,46 @@
     <script src="js/main.min.js"></script>
 
     <script>
+        const item = document.querySelector('.header__container');
+        const screen = document.querySelector('.header');
+        const link = document.querySelectorAll('.menu__link');
+
+        window.addEventListener('scroll', onScroll); // событие на окно браузер при скроле
+        function onScroll(params) {       
+        const itemHeigh = item.offsetHeight; //высота объекта
+        const screenHeigh = screen.offsetHeight; //высота экрана
+        const itemOffset = offset(item).top; // позиция объекта относительно верха, насколько объект находится ниже, чем верх страницы
+        console.log(itemHeigh, itemOffset, window.innerHeight, pageYOffset, screenHeigh);
+        if (itemOffset>window.innerHeight) {
+                console.log("jump!!!");
+                item.setAttribute("style", "color: #000; background-color: #fff;");
+                for (let i = 0; i<link.length;i++) {
+                    link[i].setAttribute("style", "color: #000;");
+                }
+              
+            }
+        if (itemOffset<window.innerHeight) {
+                console.log("return!!!");
+                item.setAttribute("style", "color: #fff; background: none;");
+                for (let i = 0; i<link.length;i++) {
+                    link[i].setAttribute("style", "color: #fff;");
+                }
+        }        
+        
+    }
+
+    // функия определения позиции єлемента относительно верха или края страницы
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+    }
+
+    </script>
+
+    <script>
+          /**Animated scroll from link *****/
         const smoothLinks = document.querySelectorAll('a[href^="#"]');
             for (let smoothLink of smoothLinks) {
             smoothLink.addEventListener('click', function (e) {

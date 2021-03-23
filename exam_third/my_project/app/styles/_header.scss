@@ -13,6 +13,7 @@
   box-sizing: border-box;
 
   &__container {
+    position: fixed;
     /*style for IE11 */
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       padding-top: 25px !important;
@@ -20,6 +21,7 @@
 
     @include _1200 {
       padding-top: 5vh !important;
+      position: relative;
     }
   }
 
@@ -152,13 +154,19 @@
       }
       &__btn {
         border: 0.5px solid $whiteColor;
-
         width: 125px;
         height: 80px;
         text-align: center;
         @include _1200 {
           width: 70px;
           height: 40px;
+        }
+        &:hover {
+          background-color: $oliveColor;
+        }
+        &:active {
+          border: $loliveColor;
+          box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -205,6 +213,10 @@
       letter-spacing: 0.4rem;
       //margin-bottom: 330px;
 
+      a:hover i {
+        color: $whiteColor;
+      }
+
       i {
         margin-left: 23px;
         color: $saladColor;
@@ -250,7 +262,7 @@
   }
 
   &__scroll a:hover {
-    color: $whiteColor;
+    color: $loliveColor;
     text-decoration: none;
   }
 

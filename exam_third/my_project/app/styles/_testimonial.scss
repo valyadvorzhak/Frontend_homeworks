@@ -20,6 +20,14 @@
     width: 130px;
     height: 100px;
     border: 1px solid $whiteColor;
+
+    &:hover {
+      background-color: $oliveColor;
+    }
+    &:active {
+      border: $loliveColor;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+    }
   }
 
   .intro {
@@ -130,6 +138,10 @@
       bottom: 100px;
       left: 0px;
       transform: rotate(90deg);
+      a:hover {
+        outline: none;
+        color: $saladColor;
+      }
     }
 
     &__text {
