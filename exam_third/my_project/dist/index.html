@@ -10,7 +10,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./libs/fontawesome/all.min.css">
-    <link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="imgo/favicon2.ico" type="image/x-icon">
     <title>cbd</title>
 
     
@@ -30,10 +30,10 @@
                         </div>
                        
                         <nav class="menu__nav">
-                            <a class="menu__link" href="#">HOME</a>
-                            <a class="menu__link" href="#">PRODUCTS</a>
-                            <a class="menu__link" href="#choose">FAQS</a>
-                            <a class="menu__link" href="#">CONTACT US</a>
+                            <a class="menu__link" href="#about">HOME</a>
+                            <a class="menu__link" href="#product-all">PRODUCTS</a>
+                            <a class="menu__link" href="#faqs">FAQS</a>
+                            <a class="menu__link" href="#contact">CONTACT US</a>
                         </nav>
                     </div>
                     <div class="header__middle col-xl-4 col-lg-1 col-12 col-sm-12 d-flex align-items-center">
@@ -63,7 +63,7 @@
     </div>
     <div class="header__scroll">
                 
-        <a href="#projects"><div  class="header__icon d-flex align-items-center justify-content-center"><i class="fas fa-chevron-down fa-2x"></i></div></a>
+        <a href="#testimonial"><div  class="header__icon d-flex align-items-center justify-content-center"><i class="fas fa-chevron-down fa-2x"></i></div></a>
     </div>
     
     <div class="header__label label">
@@ -98,7 +98,7 @@
             
             
 
-            <div class="product about__product">
+            <div id="products" class="product about__product">
                
                 <div class="container  product__container">
                     <div class="row">
@@ -213,7 +213,7 @@
            
         </div>
 
-        <div id ="products" class="products">           
+        <div id ="product-all" class="products">           
             
             <div class=" container products__container">
                 
@@ -350,7 +350,7 @@
                 </div>         
             </div>
         </div>
-        <div class="questions">
+        <div id = "faqs" class="questions">
             <div class=" container questions__container">                
                 <div class="questions__title">
                     <h2>FREQUENTLY ASKED QUESTIONS</h2>
@@ -377,7 +377,7 @@
                 </section>
             </div>    
         </div>
-        <div class="testimonial  d-flex flex-column">          
+        <div id = "testimonial" class="testimonial  d-flex flex-column">          
         <div  class="slider">   
          <div class="testimonial__intro intro slide">
              <div class="container intro__container intro__container--first slide d-flex flex-column align-items-center">
@@ -436,7 +436,7 @@
     </div>
     </main>
 
-    <footer class="footer">
+    <footer id = "contact" class="footer">
         <div class=" container footer__container">
             <div class="row">
                 <div class="footer__info info col-md-4 text-center">
@@ -478,13 +478,25 @@
         </div>
     </footer>
 
-    <p>Hello!! We use  gulp sass!</p>
     
-    <div id="testjs"></div>
-    <div class="exaple">Autoprefiх work!!!</div>
-    <div class="image">Autoprefexer work!!!</div>
     
     <script src="js/main.min.js"></script>
+
+    <script>
+        const smoothLinks = document.querySelectorAll('a[href^="#"]');
+            for (let smoothLink of smoothLinks) {
+            smoothLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                const id = smoothLink.getAttribute('href');
+
+                document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'end'
+            });
+        });
+    };
+
+    </script>    
 
     <script>
         /**Testimonial slider *****/
