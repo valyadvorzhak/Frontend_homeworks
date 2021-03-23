@@ -1,0 +1,143 @@
+.testimonial {
+  font-family: $mainFont;
+  font-weight: $textFontw;
+  width: 100%;
+  margin: 0 auto;
+  //min-height: 800px;
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+
+  &__arrowwrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &__icon {
+    color: $whiteColor;
+    width: 130px;
+    height: 100px;
+    border: 1px solid $whiteColor;
+  }
+
+  .intro {
+    @media screen and (min-width: 300px) {
+      .container {
+        max-width: 100vw !important;
+      }
+    }
+
+    //min-height: inherit;
+
+    &__container {
+      padding-top: 265px !important;
+      position: relative;
+      min-height: 800px;
+      // background-image: url("../../imgo/bg-testimonial.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $seaColor;
+
+      &--first {
+        background-image: url("../../imgo/bg-testimonial.jpg");
+      }
+
+      &--second {
+        background-image: url("../../imgo/bg-header.jpg");
+      }
+
+      @include _700 {
+        padding-top: 165px !important;
+      }
+
+      @include _575 {
+        padding-top: 50px !important;
+      }
+    }
+
+    &__introname {
+      color: $whiteColor;
+      font-family: $mainFont;
+    }
+
+    .introname {
+      &__star {
+        margin-bottom: 20px;
+        color: $loliveColor;
+      }
+
+      &__title {
+        font-size: rem-calc(22px);
+        font-family: $mainFont;
+        font-weight: $lightFontw;
+        letter-spacing: 0.1rem;
+        line-height: $secondLineHeight;
+
+        @include _767 {
+          font-size: rem-calc(18px);
+          //margin-bottom: rem-calc(10px);
+        }
+      }
+
+      &__subtitle {
+        font-size: rem-calc(24px);
+        font-weight: $textFontw;
+        letter-spacing: 0.1rem;
+        position: relative;
+        @include _767 {
+          font-size: rem-calc(16px);
+          //margin-bottom: rem-calc(10px);
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          box-sizing: border-box;
+          width: 0px;
+          height: 2px;
+          color: $whiteColor;
+          border: solid $whiteColor;
+          border-width: 0 24px;
+          margin-right: 15px;
+        }
+        //max-width: 60%;
+
+        //margin-top: 40px;
+
+        @include _991 {
+          max-width: 100%;
+        }
+
+        @include _375 {
+          font-size: rem-calc(14px);
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  .label {
+    @include _575 {
+      display: none;
+    }
+
+    &__wrapper {
+      position: absolute;
+      bottom: 100px;
+      left: 0px;
+      transform: rotate(90deg);
+    }
+
+    &__text {
+      font-size: rem-calc(24px);
+      font-family: $mainFont;
+      font-weight: $lightFontw;
+      color: $whiteColor;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

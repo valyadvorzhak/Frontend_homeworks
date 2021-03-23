@@ -1,0 +1,118 @@
+.slick-active {
+  border: none;
+  outline: none;
+}
+.products {
+  background-color: $beigeBack;
+  font-family: $mainFont;
+  font-weight: $textFontw;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 820px;
+  position: relative;
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 100vw !important;
+    }
+  }
+
+  &__arrowwrap {
+    margin-top: 60px;
+  }
+
+  &__icon {
+    color: $oliveColor;
+    width: 46px;
+    height: 46px;
+    margin-right: 60px;
+  }
+
+  &__slider {
+    position: relative;
+
+    .slide {
+      .hover {
+        position: absolute;
+        top: 80px;
+        left: 150px;
+        display: none;
+      }
+    }
+
+    .slide:hover .hover {
+      display: block;
+    }
+  }
+
+  &__container {
+    padding-top: 50px !important;
+  }
+
+  &__title {
+    //height: 273px;
+    padding-top: 0;
+    padding-bottom: 80px;
+    text-align: center;
+
+    h2 {
+      font-size: rem-calc(30px);
+      color: $brownColor;
+      letter-spacing: 0.1rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .articls {
+    &__article {
+      background-color: $whiteBack;
+      max-width: 610px;
+      //max-height: 530px;
+      text-align: center;
+      padding-top: 0;
+    }
+
+    .article {
+      &__wrapper {
+        padding-top: 40px;
+        height: 430px;
+        border: 1px solid $saladColor;
+        box-sizing: border-box;
+      }
+      &__star {
+        margin-bottom: 20px;
+        color: $oliveColor;
+      }
+      &__title {
+        font-size: rem-calc(18px);
+        color: $brownColor;
+        padding: 0;
+        margin-bottom: 40px;
+        padding-bottom: 15px;
+        //max-width: 295px;
+      }
+
+      &__price {
+        width: 100%;
+        //height: 75px;
+        background-color: $lgreyColor;
+        padding-left: 28px;
+        border: 1px solid $dgreyColor;
+        border-top: none;
+      }
+
+      &__btn {
+        @extend .base-btn;
+        background-color: $oliveColor;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include _767 {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}

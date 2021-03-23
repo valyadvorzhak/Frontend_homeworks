@@ -1,0 +1,153 @@
+.about {
+  background-color: $beigeBack;
+  padding-bottom: 75px;
+
+  &__goal {
+    min-height: 200px;
+    width: 700px;
+    margin-top: 100px;
+    background-image: url("../../imgo/bg-about.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include _767 {
+      background-image: none;
+    }
+  }
+
+  &__title {
+    font-family: $mainFont;
+    color: $brownColor;
+    font-size: rem-calc(24px);
+    font-weight: $lightFontw;
+    letter-spacing: 0.4rem;
+    padding-top: 40px;
+    text-align: center;
+
+    @include _767 {
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__product {
+    //margin-top: 110px;
+    min-height: 780px;
+    color: $dblueColor;
+    position: relative;
+  }
+
+  .product {
+    @media screen and (min-width: 1200px) {
+      .container {
+        max-width: 1200px !important;
+      }
+    }
+
+    &__container {
+      padding-top: 110px;
+
+      @include _480 {
+        padding-top: 50px;
+      }
+    }
+
+    &__img {
+      .product-img {
+        @include _1450 {
+          max-width: 470px;
+          width: 100%;
+          height: 100%;
+          min-height: 300px;
+          display: block;
+        }
+
+        @include _480 {
+          max-width: 320px;
+          margin: 0 auto;
+          height: auto;
+          min-height: auto;
+        }
+      }
+    }
+
+    &__tabs {
+      border-bottom: solid 1px $saladColor;
+      padding-bottom: 0px;
+      margin-bottom: 80px;
+      box-sizing: border-box;
+
+      .tab {
+        margin-right: 80px;
+
+        @include _1200 {
+          margin-right: 30px;
+        }
+        @include _991 {
+          margin-right: 15px;
+        }
+        @include _767 {
+          margin-right: 0;
+        }
+      }
+
+      .tab > a {
+        font-family: $mainFont;
+        color: $brownColor;
+        font-size: rem-calc(30px);
+        font-weight: $textFontw;
+        letter-spacing: 0.4rem;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        @include _1200 {
+          font-size: rem-calc(18px);
+        }
+        @include _991 {
+          font-size: rem-calc(14px);
+        }
+      }
+
+      .tab > .active {
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 2px solid $brownColor;
+      }
+    }
+
+    &__info {
+      padding-top: 40px;
+    }
+
+    .info {
+      &__title {
+        font-size: rem-calc(24px);
+        font-family: $mainFont;
+        color: $brownColor;
+        font-weight: $textFontw;
+        letter-spacing: 0.4rem;
+        max-width: 80%;
+        line-height: $secondLineHeight;
+        margin-bottom: rem-calc(30px);
+      }
+
+      &__desc {
+        font-size: rem-calc(18px);
+        color: $oliveColor;
+        font-family: $mainFont;
+        line-height: $secondLineHeight;
+        font-weight: $lightFontw;
+        letter-spacing: 0.03rem;
+        margin-bottom: rem-calc(30px);
+        position: relative;
+        max-width: 395px; /*optimization for IE11*/
+
+        @include _991 {
+          max-width: 800px; /*optimization for IE11*/
+          text-align: center;
+        }
+      }
+    }
+  }
+}

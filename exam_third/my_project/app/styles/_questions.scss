@@ -1,0 +1,83 @@
+.questions {
+  background-color: $beigeBack;
+  font-family: $mainFont;
+  font-weight: $textFontw;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 750px;
+  position: relative;
+  //padding-bottom: 150px;
+
+  &__container {
+    padding-top: 70px !important;
+    padding-bottom: 150px !important;
+  }
+
+  &__title {
+    //height: 273px;
+    padding-top: 0;
+    padding-bottom: 50px;
+    text-align: center;
+
+    h2 {
+      font-size: rem-calc(30px);
+      color: $brownColor;
+      letter-spacing: 0.1rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__accordions {
+    .accordion {
+      width: 50%;
+      border-top: 0.5px solid $oliveColor;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 46px;
+
+      &:last-child {
+        border-bottom: 0.5px solid $oliveColor;
+      }
+
+      &__quest {
+        margin-bottom: 50px;
+        i {
+          color: $oliveColor;
+          margin-left: -30px;
+          margin-right: 10px;
+        }
+
+        .fa-minus {
+          display: none;
+        }
+      }
+
+      &__title {
+        font-size: rem-calc(18px);
+        color: $oliveColor;
+        letter-spacing: 0.1rem;
+        padding: 0;
+        margin: 0;
+        font-weight: $lightFontw;
+        //margin-bottom: 50px;
+      }
+
+      &__answer {
+        font-size: rem-calc(18px);
+        color: $darkColor;
+        padding: 0;
+        margin: 0;
+        line-height: $secondLineHeight;
+        display: none;
+        @include _767 {
+          font-size: rem-calc(16px);
+        }
+        @include _480 {
+          font-size: rem-calc(12px);
+          line-height: rem-calc(20px);
+        }
+      }
+    }
+  }
+}

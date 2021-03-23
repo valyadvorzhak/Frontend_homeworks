@@ -1,0 +1,313 @@
+.header {
+  background-image: url("../../imgo/bg-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $seaColor;
+  font-family: $mainFont;
+  font-weight: $textFontw;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+
+  &__container {
+    /*style for IE11 */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      padding-top: 25px !important;
+    }
+
+    @include _1200 {
+      padding-top: 5vh !important;
+    }
+  }
+
+  &__user {
+    @include _480 {
+      order: -1;
+    }
+  }
+
+  &__user,
+  &__menu {
+    position: relative;
+    /* Landscape phone to portrait tablet */
+    @include _991 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    @include _480 {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    font-family: $mainFont;
+    font-size: rem-calc(24px);
+    letter-spacing: 0.3rem;
+    margin: 0;
+
+    @include _480 {
+      display: none;
+    }
+
+    @include _767 {
+      padding: 0.5em 0;
+    }
+  }
+
+  &__mane-menu {
+    font-family: $mainFont;
+    font-size: rem-calc(16px);
+    border-bottom: 0.5px solid $whiteColor;
+    min-height: 80px;
+    //position: fixed;
+    color: $whiteColor;
+    /*
+    @include _480 {
+      order: -1;
+    }
+    */
+    @media screen and (min-width: 1200px) {
+      .container {
+        max-width: 100vw !important;
+      }
+    }
+
+    .menu {
+      &__label {
+        position: absolute;
+        top: -3.8em;
+        right: 30px;
+        cursor: pointer;
+        z-index: 100;
+        color: $oliveColor;
+        display: none;
+        @include _480 {
+          display: block;
+        }
+      }
+
+      &__nav {
+        @include _480 {
+          overflow: hidden;
+          display: none;
+          -webkit-transition: all 0.3s ease;
+          position: absolute;
+          top: 0px;
+          height: 130px;
+          width: inherit;
+          background: $oliveColor;
+          font-size: rem-calc(14px);
+        }
+      }
+
+      &__nav > a {
+        text-decoration: none;
+        color: $whiteColor;
+        outline: none;
+        position: relative;
+        font-size: rem-calc(16px);
+        font-weight: $textFontw;
+
+        padding: 0 1em;
+        -webkit-transition: all 0.3s ease;
+
+        /* Small monitor */
+        @include _767 {
+          padding: 0 0.5em;
+          font-size: rem-calc(12px);
+        }
+
+        @include _480 {
+          padding: 0.5em 2em;
+          display: block;
+        }
+      }
+
+      &__nav > a:hover,
+      &__nav > a:focus {
+        border-top: $orangeColor 2px solid;
+        text-decoration: none;
+        color: $whiteColor;
+
+        @include _480 {
+          background: $blackBack;
+          color: $whiteColor;
+          border-top: none;
+        }
+      }
+
+      /* Landscape phones and down */
+    }
+
+    .user {
+      &__nav {
+        padding-right: 30px;
+        @include _1200 {
+          padding-right: 10px;
+        }
+      }
+      &__btn {
+        border: 0.5px solid $whiteColor;
+
+        width: 125px;
+        height: 80px;
+        text-align: center;
+        @include _1200 {
+          width: 70px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .intro {
+    @media screen and (min-width: 1200px) {
+      .container {
+        max-width: 1200px !important;
+      }
+    }
+
+    &__container {
+      padding-top: 18vh !important;
+      position: relative;
+      @include _700 {
+        padding-top: 5vh !important;
+      }
+
+      @include _575 {
+        padding-top: 15vh !important;
+      }
+    }
+
+    &__introname {
+      color: $whiteColor;
+      font-family: $mainFont;
+    }
+
+    &__btn {
+      @extend .base-btn;
+      margin-bottom: rem-calc(25px);
+      margin-top: rem-calc(55px);
+      padding-left: rem-calc(40px);
+      padding-right: rem-calc(40px);
+      //max-width: 225px;
+    }
+
+    &__products {
+      font-family: $mainFont;
+      color: $whiteColor;
+      font-size: rem-calc(18px);
+      font-weight: $lightFontw;
+      letter-spacing: 0.4rem;
+      //margin-bottom: 330px;
+
+      i {
+        margin-left: 23px;
+        color: $saladColor;
+      }
+    }
+
+    .introname {
+      &__title {
+        font-size: rem-calc(55px);
+        font-family: $mainFont;
+        font-weight: $textFontw;
+        letter-spacing: 0.8rem;
+        line-height: $firstLineHeight;
+
+        @include _767 {
+          font-size: rem-calc(35px);
+          //margin-bottom: rem-calc(10px);
+        }
+      }
+
+      &__subtitle {
+        font-size: rem-calc(24px);
+        font-weight: $lightFontw;
+        letter-spacing: 0.4rem;
+        //max-width: 60%;
+
+        //margin-top: 40px;
+
+        @include _991 {
+          max-width: 100%;
+        }
+
+        @include _375 {
+          font-size: rem-calc(14px);
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  &__scroll a {
+    color: $whiteColor;
+  }
+
+  &__scroll a:hover {
+    color: $whiteColor;
+    text-decoration: none;
+  }
+
+  &__scroll {
+    position: absolute;
+    //position: relative;
+    bottom: 50px;
+    right: 49%;
+    z-index: 100;
+
+    @include _700 {
+      bottom: 10px;
+    }
+
+    @include _375 {
+      bottom: 10px;
+    }
+  }
+
+  .label {
+    /*@media screen and (min-width: 1200px) {
+      .container {
+        max-width: 100vw !important;
+      }
+    }*/
+
+    @include _575 {
+      display: none;
+    }
+
+    &__wrapper {
+      position: absolute;
+      //bottom: 0px;
+      //left: 0px;
+      bottom: 194px;
+      left: -180px;
+      transform: rotate(-90deg);
+    }
+
+    &__text {
+      font-size: rem-calc(26px);
+      font-family: $mainFont;
+      font-weight: $textFontw;
+      color: $whiteColor;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        width: 0px;
+        height: 2px;
+        color: $whiteColor;
+        border: solid $whiteColor;
+        border-width: 0 105px;
+        margin-right: 25px;
+      }
+    }
+  }
+}
